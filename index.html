@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de estudio EFT · Inglés Intermedio I</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#4f46e5;--primary-light:#818cf8;--secondary:#7c3aed;--accent:#06b6d4;
+  --danger:#ef4444;--success:#10b981;--warning:#f59e0b;
+  --bg:#f1f5f9;--card:#ffffff;--text:#1e293b;--muted:#64748b;--border:#e2e8f0;
+  --c-l:#7c3aed;--c-r:#2563eb;--c-w:#e11d48;--c-s:#db2777;--c-g:#0d9488;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#06b6d4 100%);min-height:100vh;padding:30px 15px;color:var(--text);line-height:1.6}
+.container{background:var(--card);border-radius:20px;box-shadow:0 25px 60px rgba(79,70,229,.25);max-width:1040px;margin:0 auto;overflow:hidden}
+
+/* HEADER */
+.header{background:linear-gradient(135deg,#4f46e5,#7c3aed);padding:38px 40px 30px;text-align:center;color:#fff}
+.header .logo{font-size:.75em;letter-spacing:4px;text-transform:uppercase;opacity:.8;margin-bottom:10px}
+.header h1{font-family:'DM Serif Display',serif;font-size:2.1em;line-height:1.2;margin-bottom:6px}
+.header p{opacity:.85;font-weight:300}
+.weight-banner{display:flex;justify-content:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.weight-item{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:10px 22px;min-width:130px}
+.weight-item .pct{font-family:'DM Serif Display',serif;font-size:2.1em;line-height:1}
+.weight-item .lbl{font-size:.8em;opacity:.9;margin-top:4px}
+
+/* NAV */
+.nav{display:flex;gap:8px 8px;justify-content:center;padding:14px 8px;background:#f8fafc;border-bottom:1px solid var(--border);flex-wrap:wrap;position:sticky;top:0;z-index:50}
+.nav-group{display:flex;flex-direction:column;gap:5px;flex:0 0 auto}
+.nav-group-label{font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding-left:4px}
+.nav-tabs{display:flex;gap:3px;flex-wrap:wrap}
+.tab-btn{border:1px solid transparent;border-radius:10px;padding:6px 7px;font-family:'DM Sans',sans-serif;font-size:.77em;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.g-general .nav-group-label{color:#4338ca}.g-general .tab-btn{background:#eef2ff;color:#4338ca}
+.g-escrito .nav-group-label{color:#2563eb}.g-escrito .tab-btn{background:#eff6ff;color:#1d4ed8}
+.g-oral .nav-group-label{color:#be185d}.g-oral .tab-btn{background:#fdf2f8;color:#be185d}
+.g-cierre .nav-group-label{color:#047857}.g-cierre .tab-btn{background:#ecfdf5;color:#047857}
+.g-general.group-active .tab-btn{background:#e0e7ff}
+.g-escrito.group-active .tab-btn{background:#dbeafe}
+.g-oral.group-active .tab-btn{background:#fce7f3}
+.g-cierre.group-active .tab-btn{background:#d1fae5}
+.tab-btn:hover{transform:translateY(-1px)}
+.g-general .tab-btn.active{background:#4338ca;color:#fff}
+.g-escrito .tab-btn.active{background:#1d4ed8;color:#fff}
+.g-oral .tab-btn.active{background:#be185d;color:#fff}
+.g-cierre .tab-btn.active{background:#047857;color:#fff}
+
+/* CONTENT */
+.content{padding:34px 40px 40px}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.panel-title{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.section-icon{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5em;flex-shrink:0}
+.ic-gen{background:#e0e7ff}.ic-l{background:#ede9fe}.ic-r{background:#dbeafe}.ic-w{background:#ffe4e6}.ic-p{background:#fef3c7}.ic-s{background:#fce7f3}.ic-g{background:#ccfbf1}.ic-c{background:#d1fae5}
+.panel-title h2{font-family:'DM Serif Display',serif;font-size:1.7em;line-height:1.2}
+.panel-title p{color:var(--muted);font-size:.9em}
+h3.sub{font-family:'DM Serif Display',serif;font-size:1.25em;margin:26px 0 12px;color:var(--text)}
+p{margin-bottom:10px}
+ul.clean{padding-left:20px;margin-bottom:10px}ul.clean li{margin-bottom:4px}
+ol.clean{padding-left:22px;margin-bottom:10px}ol.clean li{margin-bottom:5px}
+
+/* BOXES */
+.tip-box,.warning-box,.example-box,.critical-box,.structure-box,.info-box{border-radius:12px;padding:15px 19px;margin:14px 0;font-size:.93em}
+.tip-box{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;color:#1e3a8a}
+.warning-box{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid #f59e0b;color:#78350f}
+.example-box{background:#f0fdf4;border:1px solid #bbf7d0;border-left:4px solid #10b981;color:#064e3b}
+.critical-box{background:#fef2f2;border:2px solid #fca5a5;border-left:6px solid #dc2626;color:#7f1d1d}
+.structure-box{background:#f5f3ff;border:1px dashed #c4b5fd;font-family:'Courier New',monospace;color:#4c1d95;font-size:.9em}
+.info-box{background:#f8fafc;border:1px solid var(--border);color:var(--text)}
+.box-title{font-weight:700;margin-bottom:6px;display:block;font-family:'DM Sans',sans-serif}
+.bad{color:#b91c1c}.good{color:#047857;font-weight:600}
+
+/* TABLES */
+table.gt{width:100%;border-collapse:collapse;margin:12px 0;font-size:.9em;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+table.gt th{background:var(--primary);color:#fff;padding:9px 12px;text-align:left;font-size:.85em;text-transform:uppercase;letter-spacing:.4px}
+table.gt td{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+table.gt tr:nth-child(even) td{background:#f8fafc}
+table.gt tr:last-child td{border-bottom:none}
+.table-wrap{overflow-x:auto}
+
+/* TENSE COLORS */
+.t-pres{background:#eff6ff;color:#1d4ed8;border-radius:4px;padding:0 4px;font-weight:600}
+.t-past{background:#f0fdf4;color:#065f46;border-radius:4px;padding:0 4px;font-weight:600}
+.t-fut{background:#f5f3ff;color:#7c3aed;border-radius:4px;padding:0 4px;font-weight:600}
+.t-pp{background:#fff7ed;color:#c2410c;border-radius:4px;padding:0 4px;font-weight:600}
+.t-would{background:#f0fdfa;color:#0f766e;border-radius:4px;padding:0 4px;font-weight:600}
+.t-mod{background:#fefce8;color:#a16207;border-radius:4px;padding:0 4px;font-weight:600}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px;font-size:.82em}
+
+/* ACCORDION */
+.accordion{border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.acc-header{width:100%;display:flex;align-items:center;gap:12px;padding:15px 18px;background:#fff;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:1em;font-weight:700;color:var(--text);text-align:left}
+.acc-header:hover{background:#f8fafc}
+.acc-tag{font-size:.7em;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.tag-l{background:#ede9fe;color:#6d28d9}.tag-r{background:#dbeafe;color:#1d4ed8}.tag-w{background:#ffe4e6;color:#be123c}.tag-s{background:#fce7f3;color:#be185d}.tag-g{background:#ccfbf1;color:#0f766e}.tag-p{background:#fef3c7;color:#92400e}
+.acc-arrow{margin-left:auto;transition:transform .25s;color:var(--muted)}
+.accordion.open .acc-arrow{transform:rotate(180deg)}
+.acc-body{display:none;padding:4px 20px 20px;border-top:1px solid var(--border)}
+.accordion.open .acc-body{display:block}
+
+/* ESENCIAL */
+.esencial{background:linear-gradient(135deg,#eef2ff,#faf5ff);border:2px solid #c7d2fe;border-radius:14px;padding:16px 20px;margin-bottom:18px}
+.esencial .box-title{color:#4338ca;font-size:1em}
+.esencial ol{padding-left:20px;margin:0}
+.esencial li{margin-bottom:5px;font-size:.93em}
+/* PRACTICA ORAL */
+.mode-switch{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.mode-btn{border:2px solid #fbcfe8;background:#fff;color:#be185d;border-radius:10px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-weight:700;cursor:pointer}
+.mode-btn.active{background:#be185d;color:#fff;border-color:#be185d}
+.oral-card{background:linear-gradient(135deg,#fdf2f8,#fce7f3);border:1px solid #fbcfe8;border-radius:16px;padding:26px;text-align:center;margin-bottom:16px}
+.oral-card .construct{display:inline-block;font-size:.75em;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#fff;color:#be185d;border-radius:20px;padding:3px 12px;margin-bottom:12px}
+.oral-card .question{font-family:'DM Serif Display',serif;font-size:1.5em;line-height:1.35;color:var(--text)}
+.oral-card .hint{font-size:.85em;color:var(--muted);margin-top:10px}
+.timer-wrap{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.timer-box{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 22px;min-width:180px;text-align:center}
+.timer-box .lbl{font-size:.8em;font-weight:700;color:var(--muted);text-transform:uppercase}
+.timer-box .time{font-family:'DM Serif Display',serif;font-size:2.4em;line-height:1.1}
+.timer-box.running{border-color:#be185d;box-shadow:0 0 0 3px #fce7f3}
+.timer-box.done .time{color:#dc2626}
+/* PANORAMA */
+.exam-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:10px 0 6px}
+.exam-card{border-radius:14px;padding:20px;border:1px solid var(--border)}
+.exam-card.escrito{background:linear-gradient(135deg,#eff6ff,#e0e7ff);border-color:#bfdbfe}
+.exam-card.oral{background:linear-gradient(135deg,#fdf2f8,#fce7f3);border-color:#fbcfe8}
+.exam-card h4{font-family:'DM Serif Display',serif;font-size:1.2em;margin-bottom:2px}
+.exam-card .meta{font-weight:700;color:var(--muted);font-size:.85em;margin-bottom:12px}
+.exam-card .part{background:#fff;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:.88em}
+.time-block{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:10px 0}
+.time-row{display:flex;justify-content:space-between;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:.92em}
+.time-row:last-child{border-bottom:none}
+.time-row .k{font-weight:600}.time-row .v{color:var(--primary);font-weight:700;white-space:nowrap}
+
+/* CALC */
+.calc-card{background:linear-gradient(135deg,#eef2ff,#f5f3ff);border:1px solid #c7d2fe;border-radius:16px;padding:22px 24px;margin-bottom:20px}
+.calc-card h3{font-family:'DM Serif Display',serif;font-size:1.25em;margin-bottom:6px}
+.formula{background:#fff;border-radius:10px;padding:10px 14px;font-weight:700;color:var(--secondary);text-align:center;margin:10px 0 16px;font-size:.95em}
+.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.calc-field label{display:block;font-size:.82em;font-weight:700;color:var(--muted);margin-bottom:4px}
+.calc-field input,.calc-field select{width:100%;padding:10px 12px;border:2px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1em;background:#fff}
+.calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--primary)}
+.btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:none;border-radius:10px;padding:11px 20px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.92em;cursor:pointer;margin-top:14px;transition:opacity .2s}
+.btn:hover{opacity:.9}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.light{background:#f1f5f9;color:var(--muted)}
+.calc-warn{color:#b45309;font-size:.85em;margin-top:8px;font-weight:600;display:none}
+.calc-result{margin-top:16px;display:none}
+.result-grade{text-align:center;border-radius:12px;padding:16px;margin-top:10px;font-weight:700}
+.result-grade .num{font-family:'DM Serif Display',serif;font-size:2.8em;line-height:1}
+.rg-1{background:#dcfce7;color:#166534}.rg-2{background:#ecfccb;color:#3f6212}.rg-3{background:#fef9c3;color:#854d0e}.rg-4{background:#ffedd5;color:#9a3412}.rg-5{background:#fee2e2;color:#991b1b}
+
+/* RUBRIC TABLE */
+table.rub{width:100%;border-collapse:collapse;font-size:.8em;margin:10px 0;min-width:680px}
+table.rub th{background:#be123c;color:#fff;padding:8px;text-align:center}
+table.rub.oral th{background:#be185d}
+table.rub td{border:1px solid var(--border);padding:8px;vertical-align:top}
+table.rub td.crit{font-weight:700;background:#fff1f2;width:15%}
+table.rub.oral td.crit{background:#fdf2f8}
+table.rub .pts{display:block;font-weight:700;color:#be123c;margin-bottom:3px}
+
+/* PRACTICA */
+.idea-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.idea-card{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:12px;text-align:center}
+.idea-card .em{font-size:1.8em}
+.idea-card strong{display:block;font-size:.88em;margin:4px 0}
+.idea-card span{font-size:.78em;color:var(--muted)}
+.prompt-box{background:#fff;border:2px solid #fbbf24;border-radius:12px;padding:16px 18px;margin:12px 0}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
+.plan-block{border-radius:12px;padding:14px}
+.plan-block h4{font-size:.92em;margin-bottom:2px}
+.plan-block .gram{font-size:.78em;margin-bottom:8px;font-weight:600}
+.plan-block textarea{width:100%;min-height:90px;border:1px solid rgba(0,0,0,.12);border-radius:8px;padding:8px;font-family:'DM Sans',sans-serif;font-size:.86em;resize:vertical}
+.pb-pres{background:#eff6ff;color:#1d4ed8}.pb-would{background:#f0fdfa;color:#0f766e}.pb-mod{background:#fefce8;color:#a16207}
+.plan-block textarea{color:var(--text)}
+.starter-list{list-style:none;margin-top:8px}
+.starter-list li{font-size:.85em;padding:5px 0;border-bottom:1px dashed rgba(0,0,0,.1);color:var(--text)}
+.step-label{display:inline-block;background:var(--secondary);color:#fff;border-radius:20px;padding:3px 12px;font-size:.78em;font-weight:700;margin-bottom:6px}
+.writing-textarea{width:100%;min-height:220px;padding:16px;border:2px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.95em;line-height:1.7;resize:vertical;margin-top:8px}
+.writing-textarea:focus{outline:none;border-color:var(--primary)}
+.word-counter{font-size:.88em;font-weight:700;color:var(--muted);text-align:right;margin-top:6px}
+.word-counter.warn{color:var(--warning)}.word-counter.good{color:var(--success)}
+.mini-check label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;font-size:.9em}
+.score-inputs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(2px)}
+.modal-overlay.active{display:flex}
+.modal{background:#fff;border-radius:16px;padding:32px 28px;max-width:450px;width:92%;text-align:center;box-shadow:0 20px 60px rgba(79,70,229,.25)}
+.modal-icon{font-size:46px;margin-bottom:10px;display:block}
+.modal h3{font-family:'DM Serif Display',serif;font-size:1.5em;margin-bottom:10px}
+.modal ol{text-align:left;font-size:.9em;color:var(--muted);margin:0 0 18px 20px}
+.modal ol li{margin-bottom:6px}
+.modal-key{display:inline-block;background:#f1f5f9;border:2px solid var(--primary);border-radius:6px;padding:1px 8px;font-weight:800;color:var(--primary)}
+.modal-btns{display:flex;gap:10px}
+.modal-btn{flex:1;padding:12px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;border:none}
+.modal-btn.cancel{background:#f1f5f9;color:var(--muted)}
+.modal-btn.go{background:linear-gradient(135deg,#4285F4,#34A853);color:#fff}
+
+/* CHECKLIST */
+.progress-wrap{background:#f1f5f9;border-radius:20px;height:14px;overflow:hidden;margin:6px 0 4px}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--success));transition:width .3s}
+.progress-label{font-size:.85em;color:var(--muted);font-weight:600;margin-bottom:18px}
+.check-group h4{font-size:.95em;margin:18px 0 8px}
+.check-item{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;cursor:pointer;transition:all .15s;background:#fff}
+.check-item:hover{border-color:var(--primary-light)}
+.check-item input{margin-top:4px;width:18px;height:18px;accent-color:var(--success);flex-shrink:0}
+.check-item .txt{flex:1;font-size:.92em}
+.check-item.done{background:#f0fdf4;border-color:#bbf7d0}
+.check-item.done .txt{text-decoration:line-through;color:var(--muted)}
+.badge{font-size:.68em;font-weight:700;padding:3px 9px;border-radius:20px;text-transform:uppercase;flex-shrink:0;margin-top:2px}
+.badge-g{background:#ccfbf1;color:#0f766e}.badge-l{background:#ede9fe;color:#6d28d9}.badge-r{background:#dbeafe;color:#1d4ed8}.badge-w{background:#ffe4e6;color:#be123c}.badge-s{background:#fce7f3;color:#be185d}.badge-d{background:#fee2e2;color:#b91c1c}
+
+.dialog{background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:.92em}
+.dialog p{margin-bottom:5px}
+.dialog b{color:var(--primary)}
+.text-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:18px 22px;margin:10px 0;line-height:1.85;font-size:.94em}
+.text-box h4{text-align:center;font-family:'DM Serif Display',serif;font-size:1.1em;margin-bottom:8px}
+.footer{text-align:center;font-size:.78em;color:var(--muted);padding:18px;border-top:1px solid var(--border)}
+
+@media (max-width:768px){
+  .content{padding:22px 18px}
+  .header{padding:28px 18px}
+  .header h1{font-size:1.55em}
+  .exam-split,.calc-grid,.plan-grid{grid-template-columns:1fr}
+  .score-inputs{grid-template-columns:1fr 1fr}
+  .nav{position:static}
+  .weight-item{min-width:95px;padding:8px 12px}
+  .weight-item .pct{font-size:1.6em}
+}
+#tab-ensayo .score-pills{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+#tab-ensayo .score-pill{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:6px 18px;font-size:.85em;font-weight:500}
+#tab-ensayo .content{padding:40px}
+#tab-ensayo .info-box{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid var(--primary);border-radius:10px;padding:18px 22px;margin-bottom:24px;font-size:.9em;line-height:1.7;color:#1e40af}
+#tab-ensayo .info-box ul{padding-left:18px;margin-top:6px}
+#tab-ensayo #savedBanner{background:#ecfdf5;border:1px solid #6ee7b7;border-radius:10px;padding:12px 18px;margin-bottom:20px;font-size:.88em;color:#065f46;display:none;align-items:center;gap:10px}
+#tab-ensayo #savedBanner button{margin-left:auto;background:none;border:1px solid #10b981;color:#065f46;padding:4px 12px;border-radius:6px;cursor:pointer;font-size:.85em;white-space:nowrap;font-family:'DM Sans',sans-serif}
+#tab-ensayo .progress-box{position:sticky;top:0;z-index:40;background:#fff;padding:10px 0 12px;margin-bottom:20px;border-bottom:1px solid var(--border)}
+#tab-ensayo .progress-track{background:#f1f5f9;border-radius:20px;height:10px;overflow:hidden}
+#tab-ensayo .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--primary),var(--secondary));transition:width .3s}
+#tab-ensayo .progress-fill.complete{background:var(--success)}
+#tab-ensayo .progress-label{font-size:.8em;color:var(--muted);font-weight:600;margin-top:5px}
+#tab-ensayo .name-block{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:35px}
+#tab-ensayo .name-block label{display:block;font-weight:600;margin-bottom:8px;color:var(--primary);font-size:.95em}
+#tab-ensayo .name-block input{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1em}
+#tab-ensayo .name-block input:focus{outline:none;border-color:var(--primary)}
+#tab-ensayo .section{margin-bottom:40px;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+#tab-ensayo .section-header{padding:18px 24px;display:flex;align-items:center;gap:12px}
+#tab-ensayo .section-header.listening{background:linear-gradient(135deg,#ede9fe,#ddd6fe);border-bottom:1px solid #c4b5fd}
+#tab-ensayo .section-header.reading{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-bottom:1px solid #93c5fd}
+#tab-ensayo .section-header.writing{background:linear-gradient(135deg,#fff1f2,#ffe4e6);border-bottom:1px solid #fca5a5}
+#tab-ensayo .section-header .icon{font-size:1.5em}
+#tab-ensayo .section-header h2{font-family:'DM Serif Display',serif;font-size:1.4em}
+#tab-ensayo .section-header .pts{margin-left:auto;background:#fff;border-radius:20px;padding:4px 14px;font-size:.82em;font-weight:600;color:var(--primary);white-space:nowrap}
+#tab-ensayo .section-body{padding:28px}
+#tab-ensayo .part-header{font-weight:700;color:var(--secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:8px;border-bottom:2px dashed #e9d5ff}
+#tab-ensayo .part-instructions{background:#fafafa;border-radius:8px;padding:12px 16px;font-size:.9em;color:var(--muted);margin-bottom:18px;line-height:1.6}
+#tab-ensayo .es-toggle{background:none;border:1px solid var(--border);border-radius:20px;padding:3px 10px;font-size:.78em;color:var(--primary);cursor:pointer;margin-top:8px;font-family:'DM Sans',sans-serif}
+#tab-ensayo .es-text{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-style:italic}
+#tab-ensayo .es-text.show{display:block}
+#tab-ensayo .part-divider{border:none;border-top:2px dashed var(--border);margin:28px 0}
+#tab-ensayo .audio-container{background:linear-gradient(135deg,#f5f3ff,#ede9fe);border:1px solid #c4b5fd;border-radius:12px;padding:16px 20px;margin-bottom:18px}
+#tab-ensayo .audio-label{font-weight:600;color:var(--secondary);margin-bottom:10px;font-size:.95em}
+#tab-ensayo audio{width:100%;border-radius:8px;margin-bottom:8px}
+#tab-ensayo .play-counter{font-size:.82em;font-weight:600;color:var(--muted);background:#fff;display:inline-block;padding:4px 12px;border-radius:20px;border:1px solid var(--border)}
+#tab-ensayo .play-counter.warning{color:var(--warning);border-color:var(--warning)}
+#tab-ensayo .play-counter.limit{color:var(--danger);border-color:var(--danger)}
+#tab-ensayo .match-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);font-size:.93em}
+#tab-ensayo .match-row:last-child{border-bottom:none}
+#tab-ensayo .match-q{flex:1}
+#tab-ensayo .match-sel{padding:6px 10px;border:2px solid var(--border);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:.93em;font-weight:600;background:#fff;cursor:pointer;min-width:70px}
+#tab-ensayo .match-sel:focus{outline:none;border-color:var(--primary)}
+#tab-ensayo .q-block{margin-bottom:20px}
+#tab-ensayo .q-label{display:flex;gap:8px;align-items:baseline;font-size:.93em;font-weight:600;margin-bottom:8px;line-height:1.4}
+#tab-ensayo .q-num{color:var(--secondary);min-width:22px;font-weight:700}
+#tab-ensayo .q-pts{margin-left:auto;font-size:.82em;font-weight:600;color:var(--muted);white-space:nowrap;background:var(--bg);padding:2px 8px;border-radius:10px}
+#tab-ensayo .conv-label{font-size:.85em;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+#tab-ensayo textarea.ans,#tab-ensayo input.ans{width:100%;padding:10px 14px;border:2px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.93em;resize:vertical}
+#tab-ensayo textarea.ans{min-height:64px}
+#tab-ensayo textarea.ans:focus,#tab-ensayo input.ans:focus{outline:none;border-color:var(--primary)}
+#tab-ensayo .reading-text-box{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:22px 26px;margin-bottom:22px;line-height:1.85;font-size:.95em}
+#tab-ensayo .reading-text-box h4{text-align:center;font-family:'DM Serif Display',serif;font-size:1.15em;margin-bottom:6px}
+#tab-ensayo .reading-intro{text-align:center;font-style:italic;color:var(--muted);font-size:.9em;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+#tab-ensayo .int-q{font-weight:700;color:var(--primary);margin-top:12px}
+#tab-ensayo .tf-row{padding:14px 0;border-bottom:1px solid var(--border)}
+#tab-ensayo .tf-row:last-child{border-bottom:none}
+#tab-ensayo .tf-statement{font-weight:600;font-size:.93em;margin-bottom:8px}
+#tab-ensayo .tf-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+#tab-ensayo .tf-opt{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border:2px solid var(--border);border-radius:8px;cursor:pointer;font-weight:700}
+#tab-ensayo .tf-opt:has(input:checked){border-color:var(--primary);background:#eef2ff}
+#tab-ensayo .tf-controls input.ans{flex:1;min-width:200px}
+#tab-ensayo .writing-prompt{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:16px 20px;font-size:.93em;line-height:1.7}
+#tab-ensayo .writing-prompt ul{padding-left:20px}
+#tab-ensayo .writing-textarea{width:100%;min-height:220px;padding:16px;border:2px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.95em;line-height:1.7;resize:vertical;margin-top:12px}
+#tab-ensayo .writing-textarea:focus{outline:none;border-color:var(--primary)}
+#tab-ensayo .word-counter{font-size:.85em;font-weight:600;color:var(--muted);margin-top:6px;text-align:right}
+#tab-ensayo .word-counter.good{color:var(--success)}
+#tab-ensayo .word-counter.warn{color:var(--warning)}
+#tab-ensayo .word-counter.bad{color:var(--danger)}
+#tab-ensayo .gemini-btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:none;border-radius:10px;padding:12px 22px;font-family:'DM Sans',sans-serif;font-size:.92em;font-weight:600;cursor:pointer;margin-top:14px;display:inline-flex;align-items:center;gap:8px}
+#tab-ensayo .gemini-btn:hover{opacity:.9}
+#tab-ensayo .gemini-warn{display:none;margin-top:8px;font-size:.85em;color:#c2410c;font-weight:600}
+#tab-ensayo .gemini-warn.visible{display:block}
+#tab-ensayo .rubric-box{margin-top:28px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+#tab-ensayo .rubric-title{background:linear-gradient(135deg,#fff1f2,#ffe4e6);padding:14px 20px;font-weight:700;color:#be123c;border-bottom:1px solid #fca5a5}
+#tab-ensayo .rubric-note{padding:10px 20px;font-size:.82em;color:var(--muted);background:#fafafa;border-bottom:1px solid var(--border)}
+#tab-ensayo .criterion{padding:18px 20px;border-bottom:1px solid var(--border)}
+#tab-ensayo .criterion h4{font-size:.93em;margin-bottom:12px}
+#tab-ensayo .criterion-options{display:flex;flex-direction:column;gap:6px}
+#tab-ensayo .criterion-options label{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:.88em;line-height:1.4;transition:all .15s}
+#tab-ensayo .criterion-options label:hover{border-color:#fca5a5;background:#fff1f2}
+#tab-ensayo .criterion-options label:has(input:checked){border:2px solid #e11d48;background:#fff1f2}
+#tab-ensayo .criterion-options input{accent-color:#e11d48;margin-top:3px;flex-shrink:0}
+#tab-ensayo .criterion-options label>div{flex:1}
+#tab-ensayo .rub-level{font-weight:700}
+#tab-ensayo .rub-pts{display:inline-block;background:#ffe4e6;color:#be123c;border-radius:12px;padding:1px 9px;font-size:.85em;margin-left:6px}
+#tab-ensayo .rub-desc{font-size:.9em;color:var(--muted);margin-top:2px}
+#tab-ensayo .check-icon{color:#e11d48;font-weight:800;visibility:hidden}
+#tab-ensayo .criterion-options label:has(input:checked) .check-icon{visibility:visible}
+#tab-ensayo .rubric-subtotal{background:#fdf2f8;padding:12px 20px;font-weight:700;font-size:.9em;color:var(--secondary);text-align:right}
+#tab-ensayo #blankWarning{background:#fffbeb;border:1px solid #fde68a;border-left:4px solid var(--warning);border-radius:10px;padding:16px 20px;margin-top:30px;font-size:.9em;color:#78350f}
+#tab-ensayo #blankWarning ul{margin:10px 0 12px 20px}
+#tab-ensayo .blank-link{background:none;border:none;color:#b45309;text-decoration:underline;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:1em;padding:2px 0;text-align:left}
+#tab-ensayo .dismiss-btn{background:#f59e0b;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif}
+#tab-ensayo .calculate-btn{display:block;width:100%;background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;border-radius:14px;padding:18px;font-family:'DM Serif Display',serif;font-size:1.3em;cursor:pointer;margin:30px 0 0}
+#tab-ensayo .calculate-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(16,185,129,.35)}
+#tab-ensayo #results{display:none;margin-top:30px}
+#tab-ensayo .results-card{background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border:1px solid #6ee7b7;border-radius:16px;padding:28px;margin-bottom:24px}
+#tab-ensayo .results-card h3{font-family:'DM Serif Display',serif;font-size:1.5em;color:#065f46;margin-bottom:18px;text-align:center}
+#tab-ensayo .score-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #a7f3d0;font-size:.95em}
+#tab-ensayo .score-row.total-row{font-weight:700;font-size:1.05em;border-bottom:none}
+#tab-ensayo .grade-display{text-align:center;margin-top:18px;padding:20px;background:#fff;border-radius:12px;border:2px solid #10b981}
+#tab-ensayo .grade-display.pending{border-color:#f59e0b;background:linear-gradient(135deg,#fffbeb,#fef9c3)}
+#tab-ensayo .grade-number{font-family:'DM Serif Display',serif;font-size:3.5em;color:var(--primary);line-height:1}
+#tab-ensayo .grade-label{color:var(--muted);font-size:.85em;margin-top:4px}
+#tab-ensayo .bounce{font-size:2em;color:#f59e0b;margin-top:8px;animation:mtbounce 1.2s infinite}
+@keyframes mtbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+#tab-ensayo .summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+#tab-ensayo .sum-card{border:1px solid var(--border);border-radius:12px;padding:14px}
+#tab-ensayo .sum-card .t{font-weight:700;font-size:.9em}
+#tab-ensayo .sum-card .s{font-size:.85em;color:var(--muted)}
+#tab-ensayo .summary-dots{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}
+#tab-ensayo .dot{width:14px;height:14px;border-radius:50%}
+#tab-ensayo .dot.correct{background:var(--success)}
+#tab-ensayo .dot.incorrect{background:var(--danger)}
+#tab-ensayo .dot.pending{background:#cbd5e1}
+#tab-ensayo .gemini-block{background:#fff;border:2px solid #c7d2fe;border-radius:14px;padding:22px;margin-bottom:22px}
+#tab-ensayo .gemini-block h3{font-family:'DM Serif Display',serif;font-size:1.3em;margin-bottom:6px}
+#tab-ensayo .gemini-block .note{font-size:.86em;color:var(--muted);margin-bottom:14px}
+#tab-ensayo .gr-group{border-top:1px dashed var(--border);padding-top:12px;margin-top:12px}
+#tab-ensayo .gr-group h4{font-size:.92em;margin-bottom:8px}
+#tab-ensayo .gr-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px;font-size:.9em}
+#tab-ensayo .gr-row label{min-width:240px}
+#tab-ensayo .gr-row input[type="number"]{width:90px;padding:6px 10px;border:2px solid var(--border);border-radius:6px;font-family:'DM Sans',sans-serif;font-weight:600;text-align:center}
+#tab-ensayo .gr-row input[type="number"].locked{background:#f1f5f9;color:var(--muted);cursor:not-allowed}
+#tab-ensayo .blank-badge{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.78em;font-weight:700;padding:3px 10px;border-radius:20px}
+#tab-ensayo .update-btn{background:linear-gradient(135deg,#10b981,#059669);color:#fff;border:none;border-radius:10px;padding:12px 22px;font-weight:700;cursor:pointer;margin-top:14px;font-family:'DM Sans',sans-serif}
+#tab-ensayo .partial-feedback-bar{background:#fefce8;border:1px solid #fde047;border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:.88em;color:#713f12}
+#tab-ensayo .partial-feedback-bar button{margin-top:8px;background:#fff;border:1px solid #eab308;border-radius:8px;padding:6px 14px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600}
+#tab-ensayo .filter-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+#tab-ensayo .filter-tab{border:1px solid var(--border);background:#fff;border-radius:20px;padding:6px 14px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85em;font-weight:600;color:var(--muted)}
+#tab-ensayo .filter-tab.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+#tab-ensayo .section-feedback-msg{border-radius:10px;padding:14px 18px;margin-bottom:12px;font-size:.9em}
+#tab-ensayo .section-feedback-msg.great{background:#dcfce7;color:#14532d}
+#tab-ensayo .section-feedback-msg.good{background:#fef9c3;color:#713f12}
+#tab-ensayo .section-feedback-msg.needswork{background:#fee2e2;color:#7f1d1d}
+#tab-ensayo .msg-tips{margin:8px 0 0 18px}
+#tab-ensayo .feedback-part{margin-bottom:20px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+#tab-ensayo .feedback-part-header{padding:12px 18px;font-weight:700;font-size:.9em}
+#tab-ensayo .feedback-part-header.listening{background:#ede9fe;color:var(--secondary)}
+#tab-ensayo .feedback-part-header.reading{background:#dbeafe;color:#1d4ed8}
+#tab-ensayo .feedback-part-header.writing{background:#ffe4e6;color:#be123c}
+#tab-ensayo .feedback-item{padding:14px 18px;border-bottom:1px solid var(--border);font-size:.88em;line-height:1.55}
+#tab-ensayo .feedback-item:last-child{border-bottom:none}
+#tab-ensayo .fb-q{font-weight:600;margin-bottom:4px}
+#tab-ensayo .student-ans{color:var(--muted)}
+#tab-ensayo .correct-ans{color:var(--success);font-weight:600}
+#tab-ensayo .explanation{margin-top:5px;color:#64748b;font-style:italic}
+#tab-ensayo .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.8em;font-weight:700;margin-left:6px}
+#tab-ensayo .tag.correct-tag{background:#dcfce7;color:#15803d}
+#tab-ensayo .tag.incorrect-tag{background:#fee2e2;color:#b91c1c}
+#tab-ensayo .tag.partial-tag{background:#fef3c7;color:#92400e}
+#tab-ensayo .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center}
+#tab-ensayo .modal-overlay.active{display:flex}
+#tab-ensayo .modal{background:#fff;border-radius:16px;padding:32px 28px;max-width:450px;width:92%;text-align:center}
+#tab-ensayo .modal-icon{font-size:46px;display:block;margin-bottom:10px}
+#tab-ensayo .modal h3{font-family:'DM Serif Display',serif;font-size:1.5em;margin-bottom:10px}
+#tab-ensayo .modal ol{text-align:left;font-size:.9em;color:var(--muted);margin:0 0 18px 20px}
+#tab-ensayo .modal ol li{margin-bottom:6px}
+#tab-ensayo .modal-key{display:inline-block;background:#f1f5f9;border:2px solid var(--primary);border-radius:6px;padding:0 7px;font-weight:800;color:var(--primary)}
+#tab-ensayo .modal-btns{display:flex;gap:10px}
+#tab-ensayo .modal-btn{flex:1;padding:12px;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;border:none}
+#tab-ensayo .modal-btn.cancel{background:#f1f5f9;color:var(--muted)}
+#tab-ensayo .modal-btn.go{background:linear-gradient(135deg,#4285F4,#34A853);color:#fff}
+#tab-ensayo #saveToast{position:fixed;bottom:24px;right:24px;background:#10b981;color:#fff;padding:10px 20px;border-radius:50px;font-size:.85em;font-weight:600;opacity:0;transform:translateY(8px);transition:all .3s;pointer-events:none;z-index:1000}
+#tab-ensayo #saveToast.show{opacity:1;transform:translateY(0)}
+@media (max-width:768px){#tab-ensayo .content{padding:20px}
+#tab-ensayo .section-body{padding:18px}
+#tab-ensayo .summary-cards{grid-template-columns:1fr}
+#tab-ensayo .gr-row label{min-width:0;width:100%}}
+#tab-ensayo .progress-box{position:static}
+
+
+.t-cont{background:#fefce8;color:#a16207;border-radius:4px;padding:0 4px;font-weight:600}
+.t-comp{background:#f1f5f9;color:#475569;border-radius:4px;padding:0 4px;font-weight:600}
+#tab-ensayo .word-box{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 16px}
+#tab-ensayo .word-box span{background:#fff;border:1px solid #c4b5fd;border-radius:8px;padding:6px 12px;font-size:.9em}
+#tab-ensayo .mc-q{padding:14px 0;border-bottom:1px solid var(--border)}
+#tab-ensayo .mc-q:last-child{border-bottom:none}
+#tab-ensayo .mc-opt{display:flex;gap:10px;align-items:center;padding:9px 14px;border:2px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;font-size:.92em}
+#tab-ensayo .mc-opt:has(input:checked){border-color:var(--primary);background:#eef2ff}
+#tab-ensayo .email-meta{font-size:.88em;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:12px;line-height:1.6}
+#tab-ensayo .feedback-part-header.writing{background:#ffe4e6;color:#be123c}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div class="logo">Inglés Intermedio I · INU5101</div>
+  <h1>Guía de estudio EFT</h1>
+  <p>Examen Final Transversal · Escrito + Oral</p>
+  <div class="weight-banner">
+    <div class="weight-item"><div class="pct">60%</div><div class="lbl">Promedio del semestre</div></div>
+    <div class="weight-item"><div class="pct">30%</div><div class="lbl">Examen escrito</div></div>
+    <div class="weight-item"><div class="pct">10%</div><div class="lbl">Examen oral</div></div>
+  </div>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="nav-group g-general" data-group="general">
+    <div class="nav-group-label">General</div>
+    <div class="nav-tabs">
+      <button class="tab-btn" data-tab="panorama" onclick="showTab('panorama')">🧭 Panorama</button>
+      <button class="tab-btn" data-tab="gramatica" onclick="showTab('gramatica')">🧩 Gramática</button>
+    </div>
+  </div>
+  <div class="nav-group g-escrito" data-group="escrito">
+    <div class="nav-group-label">Escrito · 30%</div>
+    <div class="nav-tabs">
+      <button class="tab-btn" data-tab="listening" onclick="showTab('listening')">🎧 Listening</button>
+      <button class="tab-btn" data-tab="reading" onclick="showTab('reading')">📖 Reading</button>
+      <button class="tab-btn" data-tab="writing" onclick="showTab('writing')">✍️ Writing</button>
+      <button class="tab-btn" data-tab="ensayo" onclick="showTab('ensayo')">🎯 Ensayo</button>
+    </div>
+  </div>
+  <div class="nav-group g-oral" data-group="oral">
+    <div class="nav-group-label">Oral · 10%</div>
+    <div class="nav-tabs">
+      <button class="tab-btn" data-tab="speaking" onclick="showTab('speaking')">🎤 Speaking</button>
+      <button class="tab-btn" data-tab="oral" onclick="showTab('oral')">🗣️ Práctica oral</button>
+    </div>
+  </div>
+  <div class="nav-group g-cierre" data-group="cierre">
+    <div class="nav-group-label">Cierre</div>
+    <div class="nav-tabs">
+      <button class="tab-btn" data-tab="checklist" onclick="showTab('checklist')">✅ Checklist</button>
+    </div>
+  </div>
+</nav>
+
+<div class="content">
+
+<!-- ==================== PANORAMA ==================== -->
+<section class="tab-panel" id="tab-panorama">
+  <div class="panel-title"><div class="section-icon ic-gen">🧭</div><div><h2>Panorama del examen</h2><p>Qué viene, cuánto vale y qué reglas afectan tu nota.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Tu nota final = <strong>60% promedio + 30% escrito + 10% oral</strong>.</li>
+    <li>Escrito: <strong>60 minutos</strong>, 36 puntos (Listening, Reading y Writing).</li>
+    <li>Oral: una tarea individual y una interacción en pareja (12 puntos).</li>
+    <li><strong>Una sola respuesta por ítem:</strong> una respuesta doble o ilegible vale 0. Lleva <strong>lápiz y goma o corrector</strong>.</li>
+  </ol></div>
+
+  <div class="exam-split">
+    <div class="exam-card escrito">
+      <h4>📝 Examen escrito</h4>
+      <div class="meta">30% de tu nota · 60 minutos · 36 puntos</div>
+      <div class="part">🎧 <strong>Listening (12 pts)</strong><br>Parte A: ordenar 6 eventos de un monólogo (6 pts).<br>Parte B: completar oraciones de 5 conversaciones cortas con letras de un recuadro; sobra una opción (6 pts).</div>
+      <div class="part">📖 <strong>Reading (12 pts)</strong><br>Parte A: preguntas abiertas sobre un texto, incluida una de opinión de 2 pts (6 pts).<br>Parte B: 6 preguntas de alternativas sobre un email (6 pts).</div>
+      <div class="part">✍️ <strong>Writing (12 pts)</strong><br>Responder <strong>el mismo email del Reading B</strong>, contestando todas sus preguntas. Mínimo 80 palabras.</div>
+    </div>
+    <div class="exam-card oral">
+      <h4>🎤 Examen oral</h4>
+      <div class="meta">10% de tu nota · 12 puntos</div>
+      <div class="part">👤 <strong>Sección 1 · Individual</strong><br>Eliges una tarjeta y respondes 2 preguntas con ideas completas.</div>
+      <div class="part">👥 <strong>Sección 2 · En pareja</strong><br>Cada uno hace 2 preguntas y responde 2 sobre un tema. Las preguntas deben ser distintas.</div>
+      <div class="part">📋 Se evalúa con la rúbrica oral (revísala en el tab <em>Speaking</em>).</div>
+    </div>
+  </div>
+
+  <div class="accordion" style="margin-top:16px">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Tiempo</span>⏱️ Cómo repartir los 60 minutos<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="time-block">
+        <div class="time-row"><span class="k">🎧 Listening (lo marca el audio, que suena 2 veces)</span><span class="v">~15 min</span></div>
+        <div class="time-row"><span class="k">📖 Reading</span><span class="v">~20 min</span></div>
+        <div class="time-row"><span class="k">✍️ Writing (3 planificar · 14 escribir · 3 revisar)</span><span class="v">~20 min</span></div>
+        <div class="time-row"><span class="k">🔍 Revisión final</span><span class="v">~5 min</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="critical-box">
+    <span class="box-title">🚨 Reglas que afectan tu nota</span>
+    <ul class="clean">
+      <li><strong>Una sola respuesta por ítem.</strong> Una respuesta doble o ilegible vale 0.</li>
+      <li>En Listening B escribe <strong>una letra clara</strong> por espacio. Recuerda que sobra una opción.</li>
+      <li>En las preguntas abiertas responde con <strong>oraciones completas</strong>. En la de opinión, da tu opinión <strong>y</strong> la razón.</li>
+      <li>Los audios suenan <strong>2 veces</strong>. Lee las preguntas antes de escuchar.</li>
+      <li>Prohibido usar dispositivos electrónicos. Cualquier intento de copia se califica con <strong>nota 1,0</strong>.</li>
+      <li><strong>Materiales obligatorios: lápiz y goma o corrector</strong>, de uso personal (no se prestan durante el examen).</li>
+    </ul>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Nota</span>🧮 Calculadora de nota<span class="acc-arrow">▼</span></button>
+    <div class="acc-body" style="padding-top:16px">
+      <div class="calc-card">
+        <h3>Calcula tu nota final</h3>
+        <div class="formula">Nota final = Promedio × 0,6 + Escrito × 0,3 + Oral × 0,1</div>
+        <div class="calc-grid">
+          <div class="calc-field"><label for="cPromedio">Promedio del semestre</label><input id="cPromedio" type="text" inputmode="decimal" placeholder="ej. 5,2"></div>
+          <div class="calc-field"><label for="cEscrito">Nota examen escrito</label><input id="cEscrito" type="text" inputmode="decimal" placeholder="ej. 4,8"></div>
+          <div class="calc-field"><label for="cOral">Nota examen oral</label><input id="cOral" type="text" inputmode="decimal" placeholder="ej. 5,5"></div>
+        </div>
+        <button class="btn" onclick="calcFinal()">Calcular mi nota final</button>
+        <div class="calc-warn" id="warnFinal"></div>
+        <div class="calc-result" id="resFinal"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <span class="box-title">💡 Plan para esta semana</span>
+    <ul class="clean">
+      <li><strong>Días 1–2:</strong> Gramática → Listening y Reading.</li>
+      <li><strong>Día 3:</strong> Writing.</li>
+      <li><strong>Día 4:</strong> Ensayo completo y revisión con Gemini.</li>
+      <li><strong>Días 5–6:</strong> Speaking y Práctica oral (ojalá en pareja).</li>
+      <li><strong>Día 7:</strong> Checklist y repaso de tus errores del Ensayo.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== GRAMÁTICA ==================== -->
+<section class="tab-panel" id="tab-gramatica">
+  <div class="panel-title"><div class="section-icon ic-g">🧩</div><div><h2>Gramática clave</h2><p>Solo las estructuras que evalúa este EFT.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Responde <strong>en el mismo tiempo verbal de la pregunta</strong>.</li>
+    <li><span class="t-pp">Present perfect</span> = experiencias, algo reciente, <em>how long</em> · <span class="t-past">past simple</span> = dices <strong>cuándo</strong> pasó.</li>
+    <li>Futuro: <span class="t-fut">going to</span> para planes · <span class="t-fut">will</span> para decisiones del momento y disponibilidad.</li>
+    <li><span class="t-pres">Presente simple</span> + <em>usually / always / never</em> y <em>prefer</em> para hábitos y preferencias.</li>
+    <li><em>What is he like?</em> = personalidad · <em>What does he look like?</em> = físico.</li>
+  </ol></div>
+  <div class="legend">
+    <span class="t-pres">Presente simple</span><span class="t-past">Pasado simple</span><span class="t-pp">Present perfect</span><span class="t-fut">Futuro</span><span class="t-cont">Presente continuo</span><span class="t-comp">Comparativos</span>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Clave</span>🔑 0. Responde en el tiempo de la pregunta<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p>Es lo que más puntos asegura en el Writing y en las preguntas abiertas: mira el verbo de la pregunta y úsalo en tu respuesta.</p>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Si la pregunta dice…</th><th>Respondes…</th></tr>
+        <tr><td>What <span class="t-past">did</span> you do after class on Monday?</td><td>I <span class="t-past">went</span> to the gym and <span class="t-past">cooked</span> pasta.</td></tr>
+        <tr><td><span class="t-pp">Have</span> you ever <span class="t-pp">tried</span> Peruvian food?</td><td>Yes, I <span class="t-pp">have</span>. I <span class="t-past">tried</span> ceviche last month.</td></tr>
+        <tr><td><span class="t-fut">Will</span> you come to the concert on Friday?</td><td>Yes, I <span class="t-fut">will</span>. I<span class="t-fut">'ll meet</span> you there at 8.</td></tr>
+        <tr><td>How do you <span class="t-pres">usually get</span> to work?</td><td>I <span class="t-pres">usually take</span> the metro.</td></tr>
+        <tr><td><span class="t-fut">Are</span> you <span class="t-fut">going to paint</span> your room?</td><td>Yes, I<span class="t-fut">'m going to paint</span> it blue.</td></tr>
+      </table></div>
+      <div class="example-box"><span class="box-title">Pregunta: Have you visited the new museum?</span>
+        <span class="bad">❌ Yes.</span><br><span class="good">✓ Yes, I have. I visited it last Sunday and I loved the old photos.</span></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>1. Present perfect vs past simple<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="structure-box">PRESENT PERFECT: [Subject] + have/has + [participle]<br>PAST SIMPLE: [Subject] + [verb in past] + [finished time]</div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Uso</th><th>Ejemplo</th></tr>
+        <tr><td>Experiencias (sin fecha)</td><td>I<span class="t-pp">'ve</span> never <span class="t-pp">played</span> golf.</td></tr>
+        <tr><td>Algo reciente</td><td>I<span class="t-pp">'ve</span> recently <span class="t-pp">started</span> a yoga class.</td></tr>
+        <tr><td><em>How long</em> (for / since)</td><td>She<span class="t-pp">'s had</span> her bike for three years.</td></tr>
+        <tr><td>Superlativo + <em>ever</em></td><td>It's the best book I<span class="t-pp">'ve</span> ever <span class="t-pp">read</span>.</td></tr>
+        <tr><td><span class="t-past">Past simple</span>: momento terminado</td><td>I <span class="t-past">went</span> to a yoga class last Tuesday.</td></tr>
+      </table></div>
+      <div class="tip-box"><span class="box-title">🔎 Palabras señal</span>
+        <span class="t-pp">ever · never · recently · just · for · since</span> &nbsp;vs&nbsp; <span class="t-past">yesterday · last… · ago · in 2023</span></div>
+      <div class="tip-box"><span class="box-title">💡 Truco</span>Pregunta en present perfect → respondes en present perfect y el <strong>detalle</strong> va en past simple: <em>Yes, I have. I tried it last month.</em></div>
+      <div class="example-box"><span class="bad">❌ I have gone there last month.</span> → <span class="good">✓ I went there last month.</span></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>2. Formas de futuro<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="structure-box">GOING TO: [Subject] + am/is/are + going to + [base verb]<br>WILL: [Subject] + will + [base verb]<br>PRESENT CONTINUOUS: [Subject] + am/is/are + [verb-ing] + [time]</div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Forma</th><th>Uso</th><th>Ejemplo</th></tr>
+        <tr><td><span class="t-fut">going to</span></td><td>Planes e intenciones</td><td>I<span class="t-fut">'m going to learn</span> to swim.</td></tr>
+        <tr><td><span class="t-cont">presente continuo</span></td><td>Planes con hora o día fijados</td><td>I<span class="t-cont">'m meeting</span> my cousin at 6 tomorrow.</td></tr>
+        <tr><td><span class="t-fut">will</span></td><td>Decisiones del momento, ofrecimientos, disponibilidad</td><td>It's cold. I<span class="t-fut">'ll close</span> the window.<br><span class="t-fut">Will</span> you be at home tonight?</td></tr>
+      </table></div>
+      <div class="example-box"><span class="bad">❌ I will to call you.</span> / <span class="bad">❌ I going to call you.</span> → <span class="good">✓ I'll call you. / I'm going to call you.</span></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>3. Presente simple: frecuencia y preferencias<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="structure-box">[Subject] + [adverb of frequency] + [verb]  →  I usually read before bed.<br>[Subject] + be + [adverb of frequency]  →  She is never late.<br>prefer + noun / verb-ing  ·  prefer X to Y</div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Uso</th><th>Ejemplo</th></tr>
+        <tr><td>Hábitos</td><td>I <span class="t-pres">usually read</span> before bed.</td></tr>
+        <tr><td>Con <em>be</em>, el adverbio va después</td><td>She <span class="t-pres">is never</span> late.</td></tr>
+        <tr><td>Preferencias</td><td>I <span class="t-pres">prefer</span> walking. · I <span class="t-pres">prefer</span> tea to coffee.</td></tr>
+        <tr><td><em>like / love / enjoy</em> + -ing</td><td>I <span class="t-pres">enjoy</span> cooking on Fridays.</td></tr>
+      </table></div>
+      <div class="example-box"><span class="bad">❌ She don't like coffee.</span> → <span class="good">✓ She doesn't like coffee.</span><br><span class="bad">❌ I usually am tired.</span> → <span class="good">✓ I'm usually tired.</span></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>4. Presente continuo: ahora y describir una imagen<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="structure-box">[Subject] + am/is/are + [verb-ing]</div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Uso</th><th>Ejemplo</th></tr>
+        <tr><td>Lo que pasa ahora o en esta etapa</td><td>I<span class="t-cont">'m studying</span> a lot these days.</td></tr>
+        <tr><td>Describir una imagen</td><td>In this picture, two kids <span class="t-cont">are playing</span> in the snow and a woman <span class="t-cont">is taking</span> photos.</td></tr>
+      </table></div>
+      <div class="warning-box"><span class="box-title">⚠️ Cuidado</span>Los verbos de estado (<em>know, like, want, need</em>) no van en continuo: <span class="bad">❌ I'm knowing</span> → <span class="good">✓ I know</span>.</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>5. Comparativos y superlativos<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="structure-box">SHORT: adjective + -er + than  ·  the + adjective + -est<br>LONG:  more + adjective + than  ·  the most + adjective<br>IRREGULAR: good → better → the best  ·  bad → worse → the worst<br>EQUAL: as + adjective + as</div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Ejemplo</th></tr>
+        <tr><td>Trains are <span class="t-comp">faster than</span> buses.</td></tr>
+        <tr><td>My new phone is <span class="t-comp">more expensive than</span> the old one.</td></tr>
+        <tr><td>Winter is <span class="t-comp">the coldest</span> season.</td></tr>
+        <tr><td>My sister is <span class="t-comp">as tall as</span> me.</td></tr>
+      </table></div>
+      <div class="tip-box"><span class="box-title">💡 Para comparar bien</span>Da 2 ideas y usa <strong>but</strong>: <em>Trains are faster than buses, but buses are cheaper.</em></div>
+      <div class="example-box"><span class="bad">❌ more bigger · more good</span> → <span class="good">✓ bigger · better</span></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-g">Gramática</span>6. Describir personas<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Pregunta</th><th>Pregunta por…</th><th>Respuesta</th></tr>
+        <tr><td>What is your neighbor <strong>like</strong>?</td><td>Personalidad</td><td>He's friendly and patient, but a bit shy.</td></tr>
+        <tr><td>What does she <strong>look like</strong>?</td><td>Físico</td><td>She's tall, has short curly hair and wears glasses.</td></tr>
+      </table></div>
+      <div class="warning-box"><span class="box-title">⚠️ Error típico</span>"¿Cómo es?" <strong>no</strong> es <em>How is he?</em> (eso pregunta por el estado o la salud). Usa <em>What is he like?</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LISTENING ==================== -->
+<section class="tab-panel" id="tab-listening">
+  <div class="panel-title"><div class="section-icon ic-l">🎧</div><div><h2>Listening</h2><p>12 puntos · los audios se reproducen 2 veces.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Lee las preguntas y las opciones <strong>antes</strong> del audio.</li>
+    <li>Parte A: las ideas están dichas <strong>con otras palabras</strong>. Numéralas según el orden en que <strong>las escuchas</strong>.</li>
+    <li>Parte B: hay 7 opciones y sobra una. Cada letra se usa <strong>una sola vez</strong>.</li>
+    <li>El último ítem de la Parte B pregunta por lo que <strong>todas</strong> las conversaciones tienen en común.</li>
+  </ol></div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-l">Parte A · 6 pts</span>Ordenar eventos<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> una persona habla sola y tú numeras del 1 al 6 los eventos en el orden en que los menciona.</p>
+      <div class="tip-box"><span class="box-title">🎯 Estrategia en 3 pasos</span>
+        <ol class="clean">
+          <li><strong>Antes del audio:</strong> subraya la palabra clave de cada evento.</li>
+          <li><strong>Primera escucha:</strong> numera solo lo que tengas seguro.</li>
+          <li><strong>Segunda escucha:</strong> confirma y completa lo que falte.</li>
+        </ol></div>
+      <h3 class="sub">Ejemplo de paráfrasis</h3>
+      <p style="font-size:.9em;color:var(--muted)">Una coordinadora explica un día de voluntariado en un parque.</p>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>En el audio escuchas…</th><th>En la hoja lees…</th></tr>
+        <tr><td>"First, we're all going to meet at the main gate."</td><td>The group meets at the entrance.</td></tr>
+        <tr><td>"You'll need gloves, so bring a pair."</td><td>Participants need something for their hands.</td></tr>
+        <tr><td>"After the break, we're going to plant trees near the lake."</td><td>They will plant trees after resting.</td></tr>
+        <tr><td>"It's going to be windy later, so bring a jacket."</td><td>The weather is going to change.</td></tr>
+      </table></div>
+      <div class="info-box"><span class="box-title">🔔 Palabras que marcan orden</span><em>first · then · later · after lunch · before that · finally</em></div>
+      <div class="warning-box"><span class="box-title">⚠️ Error típico</span>Numerar según el orden en que <strong>ocurren</strong> las cosas. Si la hablante dice <em>"Before that, remember to…"</em>, menciona algo que pasa antes, pero lo dice después. Numera según lo que <strong>escuchas</strong>.</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-l">Parte B · 6 pts</span>Completar con letras<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> escuchas conversaciones cortas y completas una oración por conversación con una letra del recuadro. Sobra una opción. El último ítem pregunta por el tema común.</p>
+      <div class="tip-box"><span class="box-title">🎯 Estrategia</span>
+        <ul class="clean">
+          <li><strong>Antes del audio, clasifica las opciones por tipo.</strong> Si la oración dice <em>"is going to ___"</em>, necesita un verbo; si dice <em>"is expecting ___"</em>, un sustantivo. Así descartas opciones sin escuchar.</li>
+          <li>Mientras escuchas, identifica <strong>dónde están</strong> y <strong>qué quiere o qué problema tiene</strong> cada persona.</li>
+          <li>Tacha cada letra que uses.</li>
+        </ul></div>
+      <h3 class="sub">Ejemplo</h3>
+      <div class="dialog">
+        <p><b>Recuadro:</b> A. a job interview · B. order a pizza · C. lost his keys · D. a birthday cake</p>
+        <p><b>Man:</b> "I can't open the door. I looked in my bag and in my jacket…"</p>
+        <p>→ The man is upset because he ______ . → <strong>C</strong></p>
+      </div>
+      <p style="font-size:.9em">"is upset because he ___" pide un <strong>verbo en pasado</strong>: solo <strong>C</strong> encaja en la gramática y en la idea.</p>
+      <div class="info-box"><span class="box-title">🌐 Ítem del tema común</span>Al final, piensa en <strong>una idea general</strong> que sirva para todas las conversaciones, no en un detalle de una sola. Ejemplo propio: una persona aprobó un examen, otra consiguió trabajo y otra ganó un partido → <em>sharing good news</em>.</div>
+      <div class="warning-box"><span class="box-title">⚠️ Errores frecuentes</span>
+        <ul class="clean"><li>Usar la misma letra dos veces.</li><li>Elegir una opción por una palabra que suena en el audio, sin que calce con la situación.</li><li>En el tema común, elegir un detalle de una sola conversación.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:18px">🎯 <strong>Ponlo a prueba:</strong> cuando termines de estudiar este tab, haz el <a href="#" onclick="showTab('ensayo');return false;"><strong>Ensayo</strong></a>.</div>
+</section>
+
+<!-- ==================== READING ==================== -->
+<section class="tab-panel" id="tab-reading">
+  <div class="panel-title"><div class="section-icon ic-r">📖</div><div><h2>Reading</h2><p>12 puntos · lee primero las preguntas.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Lee las preguntas <strong>primero</strong> y marca la palabra interrogativa (<em>What, Why, How often, What … like</em>).</li>
+    <li>Parte A: responde con <strong>oración completa</strong> y en el tiempo verbal de la pregunta. No copies un párrafo entero.</li>
+    <li>Pregunta de opinión (2 pts): <strong>tu opinión + dos razones</strong>.</li>
+    <li>Parte B: para cada alternativa, busca en el email la oración que la confirma.</li>
+    <li>La <strong>firma</strong> dice quién escribe y su cargo. Lee el email con atención: <strong>en el Writing vas a responderlo</strong>.</li>
+  </ol></div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-r">Parte A · 6 pts</span>Preguntas abiertas y de opinión<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> lees un texto y respondes preguntas abiertas de 1 punto y una pregunta de opinión de 2 puntos.</p>
+      <div class="tip-box"><span class="box-title">🎯 Estrategia</span>
+        <ol class="clean">
+          <li>Identifica qué dato pide cada pregunta: <em>What … like?</em> = personalidad · <em>How often?</em> = frecuencia · <em>Why?</em> = razón con <em>because</em>.</li>
+          <li>Ubica en el texto la oración exacta y escribe solo esa información, como oración completa.</li>
+        </ol></div>
+      <h3 class="sub">Ejemplo</h3>
+      <div class="text-box">
+        <h4>The Book Bus</h4>
+        Since 2021, an old school bus has visited five small villages near Talca every week. It carries more than 2,000 books for children and adults. The driver, Rosa, is a retired teacher. She is patient and very funny, and she always reads stories aloud to the kids. Many children in these villages live far from a library, so they wait for the bus every Thursday. Last year, the project won a prize for education.
+      </div>
+      <div class="example-box">
+        <strong>What is Rosa like?</strong> → <span class="good">✓ She is patient and very funny.</span><br>
+        <strong>How often does the bus visit the villages?</strong> → <span class="good">✓ It visits them every week.</span><br>
+        <strong>Why do children wait for the bus?</strong> → <span class="bad">❌ "Library."</span> / <span class="good">✓ Because they live far from a library.</span>
+      </div>
+      <p><strong>Pregunta de opinión (2 pts): Do you think a library on a bus is a good idea? Why or why not?</strong></p>
+      <div class="example-box">
+        <span class="bad">🔴 0 pts: "Yes."</span><br>
+        <span style="color:#a16207">🟡 1 pt: "Yes, because kids can read."</span><br>
+        <span class="good">🟢 2 pts: "Yes, I think it's a great idea because children in small villages can read new books, and it is free for their families."</span>
+      </div>
+      <div class="tip-box">💡 Cualquier opinión vale (sí o no). Lo que da puntaje es <strong>justificarla con dos ideas</strong>.</div>
+      <div class="warning-box"><span class="box-title">⚠️ Errores frecuentes</span>
+        <ul class="clean"><li>Responder con una sola palabra.</li><li>Copiar una oración del texto que no responde la pregunta.</li><li>Dar una sola razón en la pregunta de 2 pts.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-r">Parte B · 6 pts</span>Selección múltiple sobre un email<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> lees un email con varias preguntas del remitente y respondes 6 preguntas de alternativas (A–D) sobre qué pide, qué planea y quién es.</p>
+      <div class="tip-box"><span class="box-title">🎯 Estrategia</span>
+        <ul class="clean">
+          <li>Marca en el email <strong>cada pregunta</strong> que hace el remitente: en el Writing vas a responderlas.</li>
+          <li>Elimina las alternativas que agregan algo que el email no dice o que son demasiado generales.</li>
+          <li>Para <em>¿quién es?</em>, mira la firma: nombre y cargo.</li>
+        </ul></div>
+      <h3 class="sub">Ejemplo</h3>
+      <div class="text-box">
+        "…Have you played in a team before? Also, which day is better for you to train, Tuesday or Thursday?…"<br>
+        <strong>Daniel Rojas — Sports Coordinator</strong>
+      </div>
+      <div class="example-box">
+        <strong>What does Daniel want to know about training?</strong><br>
+        a) If students have a uniform · <span class="good">b) Which day students prefer</span> · c) If they can play on Saturday · d) How many friends they have<br>
+        <span style="font-size:.9em">La c) usa la idea de "día", pero el email no menciona el sábado.</span>
+      </div>
+      <div class="warning-box"><span class="box-title">⚠️ Error típico</span>Elegir la alternativa que tiene la misma palabra del texto sin verificar que diga lo mismo.</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:18px">🎯 <strong>Ponlo a prueba:</strong> cuando termines de estudiar este tab, haz el <a href="#" onclick="showTab('ensayo');return false;"><strong>Ensayo</strong></a>.</div>
+</section>
+
+<!-- ==================== WRITING ==================== -->
+<section class="tab-panel" id="tab-writing">
+  <div class="panel-title"><div class="section-icon ic-w">✍️</div><div><h2>Writing</h2><p>12 puntos · mínimo 80 palabras.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Vas a <strong>responder el email del Reading B</strong> contestando <strong>todas</strong> sus preguntas (mínimo 80 palabras).</li>
+    <li>Una pregunta → una respuesta de <strong>2 oraciones</strong> (respuesta + detalle o razón), en el tiempo verbal de la pregunta.</li>
+    <li>Con <strong>6 ideas completas</strong> y <strong>8 palabras del nivel</strong> llegas al máximo en los dos primeros criterios.</li>
+    <li>Guarda <strong>3 minutos</strong> para revisar ortografía y verbos.</li>
+  </ol></div>
+
+  <div class="info-box"><span class="box-title">📝 La tarea</span>
+    Respondes el email que leíste en el Reading B. Saluda, contesta cada pregunta en orden y despídete. Usa la gramática y el vocabulario del curso.</div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-w">Estrategia</span>Cómo responder un email pregunta por pregunta<span class="acc-arrow">▼</span></button>
+    <div class="acc-body" style="padding-top:12px">
+      <div class="structure-box">Hi / Dear [name],<br>Thanks for your email.<br>[Answer to question 1] · [Answer to question 2] · …<br>Best regards,<br>[Your name]</div>
+      <div class="tip-box"><span class="box-title">🧮 La fórmula</span>
+        <strong>5 preguntas × 2 oraciones + saludo y cierre ≈ 90 palabras y 6 ideas o más.</strong></div>
+      <h3 class="sub">Tipo de pregunta → tiempo verbal</h3>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Si la pregunta es…</th><th>Responde con…</th><th>Starter</th></tr>
+        <tr><td><span class="t-past">What did you…? / How was…?</span></td><td>past simple</td><td>Last …, I went… and I…</td></tr>
+        <tr><td><span class="t-fut">Will you…? / Can you come…?</span></td><td>will / can + detalle</td><td>Yes, I will. I'll… / Sorry, I can't because…</td></tr>
+        <tr><td><span class="t-pp">Have you (ever / recently)…?</span></td><td>present perfect + detalle en pasado</td><td>Yes, I have. I… last month and…</td></tr>
+        <tr><td><span class="t-pres">How do you usually…? / Do you prefer…?</span></td><td>presente simple + frecuencia / prefer</td><td>I usually… / I prefer… because…</td></tr>
+        <tr><td><span class="t-fut">What are your plans for…?</span></td><td>going to / presente continuo</td><td>I'm going to… / I'm visiting…</td></tr>
+      </table></div>
+      <p><strong>Planificación en 3 minutos</strong></p>
+      <ol class="clean">
+        <li>Numera las preguntas del email.</li>
+        <li>Al lado de cada una, anota el tiempo verbal y una palabra clave para tu respuesta.</li>
+        <li>Escribe en el mismo orden.</li>
+      </ol>
+      <p style="margin-top:10px"><strong>Ejemplo (respuesta al email del coordinador de futsal del tab Reading)</strong></p>
+      <div class="example-box">
+        <span class="bad">❌ Yes. Thursday. I like play.</span><br><span style="font-size:.85em">Ideas sin desarrollo, con errores y sin conectores.</span><br><br>
+        <span class="good">✓ Hi Daniel, Thanks for your email. Yes, I <span class="t-pp">have played</span> in a team before. I <span class="t-past">played</span> basketball at school for three years and I loved it. <strong>About</strong> training, Thursday is better for me <strong>because</strong> I have English classes on Tuesdays. Best regards, Camila.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-w">Conectores</span>Conectores útiles<span class="acc-arrow">▼</span></button>
+    <div class="acc-body" style="padding-top:12px">
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Para…</th><th>Usa…</th></tr>
+        <tr><td>dar razones</td><td>because, so</td></tr>
+        <tr><td>agregar</td><td>also, in addition</td></tr>
+        <tr><td>contrastar</td><td>but, however, although</td></tr>
+        <tr><td>ejemplificar</td><td>for example</td></tr>
+        <tr><td>pasar a la siguiente pregunta</td><td>about…, as for…, regarding…</td></tr>
+        <tr><td>abrir y cerrar</td><td>Thanks for your email. · Looking forward to…</td></tr>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-w">Criterios</span>Cómo cuida cada criterio tus puntos<span class="acc-arrow">▼</span></button>
+    <div class="acc-body" style="padding-top:12px">
+      <div class="warning-box"><span class="box-title">⚠️ Cómo cuida cada criterio tus puntos</span>
+        <ul class="clean">
+          <li><strong>Coherencia y extensión:</strong> 80 palabras o más y 6 ideas completas = máximo. Si dejas una pregunta sin responder, pierdes ideas.</li>
+          <li><strong>Vocabulario:</strong> usa al menos <strong>8 palabras del nivel</strong>. No repitas siempre <em>good</em> y <em>nice</em>.</li>
+          <li><strong>Gramática:</strong> con 2 o 3 errores ya bajas a 2,4. Revisa el tiempo verbal de cada respuesta, <em>will / can</em> + verbo base (sin <em>to</em>) y la concordancia sujeto-verbo.</li>
+          <li><strong>Ortografía:</strong> con 3 errores ya no tienes el máximo.</li>
+        </ul></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-w">Rúbrica</span>Rúbrica oficial de Writing (12 pts)<span class="acc-arrow">▼</span></button>
+    <div class="acc-body" style="padding-top:12px">
+      <div class="table-wrap"><table class="rub">
+        <tr><th>Criterio</th><th>Totalmente Logrado (100%)</th><th>Logrado (80%)</th><th>Parcialmente Logrado (60%)</th><th>Insuficientemente Logrado (30%)</th><th>No Logrado (0%)</th></tr>
+        <tr><td class="crit">1. Coherencia y Extensión</td>
+          <td><span class="pts">4 pts</span>Escribe oraciones o párrafos, usando 80 palabras o más. Desarrolla, al menos, 6 ideas de manera completa y detallada, coherentes con el estímulo.</td>
+          <td><span class="pts">3,2 pts</span>Escribe oraciones o párrafos, usando de 60 a 79 palabras. Desarrolla, al menos, 5 ideas de manera completa y detallada, coherentes con el estímulo.</td>
+          <td><span class="pts">2,4 pts</span>Escribe oraciones o párrafos, usando de 40 a 59 palabras. Desarrolla, al menos, 4 ideas de manera completa, coherentes con el estímulo.</td>
+          <td><span class="pts">1,2 pts</span>Escribe oraciones o párrafos, usando de 30 a 39 palabras. Desarrolla entre 3 y 2 ideas de manera completa, coherentes con el estímulo.</td>
+          <td><span class="pts">0 pts</span>No hay respuesta o escribe menos de 30 palabras.</td></tr>
+        <tr><td class="crit">2. Vocabulario</td>
+          <td><span class="pts">3 pts</span>Utiliza 8 o más palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.</td>
+          <td><span class="pts">2,4 pts</span>Utiliza 6 o 7 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.</td>
+          <td><span class="pts">1,8 pts</span>Utiliza 4 o 5 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.</td>
+          <td><span class="pts">0,9 pts</span>Utiliza al menos 3 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.</td>
+          <td><span class="pts">0 pts</span>No responde o utiliza menos de 2 palabras del vocabulario estudiado, y/o no se ajustan al estímulo.</td></tr>
+        <tr><td class="crit">3. Gramática</td>
+          <td><span class="pts">3 pts</span>Aplica las reglas gramaticales, conjuga los tiempos verbales y estructura las oraciones correctamente en todos los casos, sin presentar errores.</td>
+          <td><span class="pts">2,4 pts</span>Aplica las reglas gramaticales correctamente en la mayoría de los casos, presentando entre 2 y 3 errores que no afectan la comprensión del texto.</td>
+          <td><span class="pts">1,8 pts</span>Aplica las reglas gramaticales de forma correcta en algunos casos, presentando entre 4 y 5 errores, pero en general el texto sigue siendo comprensible.</td>
+          <td><span class="pts">0,9 pts</span>Presenta hasta 6 errores gramaticales que limitan y obstaculizan la claridad del mensaje.</td>
+          <td><span class="pts">0 pts</span>No hay respuesta o hay 7 o más errores gramaticales que impiden la comprensión del mensaje.</td></tr>
+        <tr><td class="crit">4. Ortografía</td>
+          <td><span class="pts">2 pts</span>Hay 1 o 2 errores ortográficos en todo el texto que no afectan el mensaje.</td>
+          <td><span class="pts">1,6 pts</span>Hay 3 o 4 errores ortográficos en todo el texto que no afectan en general el mensaje.</td>
+          <td><span class="pts">1,2 pts</span>Hay 5 o 6 errores ortográficos en todo el texto que afectan parcialmente el mensaje.</td>
+          <td><span class="pts">0,6 pts</span>Hay 7 a 9 errores ortográficos en todo el texto que afectan la idea principal del mensaje.</td>
+          <td><span class="pts">0 pts</span>No hay respuesta o hay más de 10 errores que afectan la comprensión.</td></tr>
+      </table></div>
+    </div>
+  </div>
+  <div class="tip-box">🎯 <strong>Ponlo a prueba:</strong> escribe tu respuesta en el <a href="#" onclick="showTab('ensayo');return false;"><strong>Ensayo</strong></a> y revísala con Gemini.</div>
+</section>
+
+<!-- ==================== MINI ENSAYO ==================== -->
+<section class="tab-panel" id="tab-ensayo">
+  <div class="panel-title"><div class="section-icon ic-p">🎯</div><div><h2>Mini ensayo</h2><p>Versión breve del examen escrito · 28 puntos · ≈35 minutos</p></div></div>
+
+  <div class="info-box">
+    <strong>Instrucciones generales</strong>
+    <ul>
+      <li>Este ensayo tiene las mismas secciones que el examen escrito, con menos preguntas.</li>
+      <li>Escucha cada audio <strong>máximo 2 veces</strong>. Lee las preguntas antes de escuchar.</li>
+      <li>Responde las preguntas abiertas con <strong>oraciones completas</strong>.</li>
+      <li>Tus respuestas se guardan automáticamente en este navegador.</li>
+      <li>Al final, calcula tu nota y completa la revisión con Gemini para Reading A y el Writing.</li>
+    </ul>
+    <button class="es-toggle" onclick="mt_toggleEs('es-directions')">🌐 Ver en español</button>
+    <div class="es-text" id="es-directions">Las instrucciones generales ya están en español. Las de cada sección están en inglés, como en el examen real, y cada una tiene su botón de traducción.</div>
+  </div>
+
+  <div id="savedBanner">🗑️ Tienes respuestas guardadas.<button onclick="mt_clearAllAnswers()">Borrar y empezar de nuevo</button></div>
+
+  <div class="progress-box">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label" id="progressLabel">0 de 20 preguntas respondidas</div>
+  </div>
+
+  <div class="name-block">
+    <label for="studentName">👤 Tu nombre</label>
+    <input type="text" id="studentName" placeholder="Escribe tu nombre" oninput="mt_saveAll()">
+  </div>
+
+  <!-- ============ LISTENING ============ -->
+  <div class="section">
+    <div class="section-header listening"><span class="icon">🎧</span><h2>I. Listening</h2><span class="pts">8 points</span></div>
+    <div class="section-body">
+      <div class="part-header">Part A</div>
+      <div class="part-instructions">
+        Listen to a voice message. Number the events in the order they are mentioned (1–4) by selecting from the dropdown. Bear in mind that the events are worded differently from the audio. <strong>(4 points, 1 each)</strong>
+        <br><button class="es-toggle" onclick="mt_toggleEs('es-la')">🌐 Ver en español</button>
+        <div class="es-text" id="es-la">Escucha un mensaje de voz. Numera los eventos en el orden en que se mencionan (1–4) seleccionando el número en el menú desplegable. Ten en cuenta que los eventos están escritos con palabras distintas a las del audio. (4 puntos, 1 cada uno)</div>
+      </div>
+      <div class="audio-container">
+        <div class="audio-label">🔊 Audio — Part A</div>
+        <audio id="audioA" controls preload="metadata" playsinline onplay="mt_trackPlay('audioA')"><source src="https://github.com/Moncholate/INU5101-EFT-Study-Guide/raw/refs/heads/main/Listening%20A.mp3" type="audio/mpeg"></audio>
+        <div class="play-counter" id="counter_audioA">Reproducciones: 0 / 2</div>
+      </div>
+      <div class="match-row"><span class="match-q">The friends are going to visit a place next to the water.</span>
+        <select class="match-sel" id="la1" onchange="mt_saveAll()"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div class="match-row"><span class="match-q">Someone will be waiting for the visitor when he arrives.</span>
+        <select class="match-sel" id="la2" onchange="mt_saveAll()"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div class="match-row"><span class="match-q">The visitor doesn't need to pay for the evening event.</span>
+        <select class="match-sel" id="la3" onchange="mt_saveAll()"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+      <div class="match-row"><span class="match-q">An older family member is preparing a meal.</span>
+        <select class="match-sel" id="la4" onchange="mt_saveAll()"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+
+      <hr class="part-divider">
+      <div class="part-header">Part B</div>
+      <div class="part-instructions">
+        You will listen to three short conversations. Complete each sentence by selecting a letter from the box. There's one extra option you don't need to use. <strong>(4 points, 1 each)</strong>
+        <br><button class="es-toggle" onclick="mt_toggleEs('es-lb')">🌐 Ver en español</button>
+        <div class="es-text" id="es-lb">Escucharás tres conversaciones cortas. Completa cada oración seleccionando una letra del recuadro. Hay una opción extra que no necesitas usar. (4 puntos, 1 cada una)</div>
+      </div>
+      <div class="audio-container"><div class="audio-label">🔊 Audio — Part B (3 conversations)</div>
+        <audio id="audioB" controls preload="metadata" playsinline onplay="mt_trackPlay('audioB')"><source src="https://github.com/Moncholate/INU5101-EFT-Study-Guide/raw/refs/heads/main/Listening%20B.mp3" type="audio/mpeg"></audio>
+        <div class="play-counter" id="counter_audioB">Reproducciones: 0 / 2</div></div>
+      <div class="word-box">
+        <span><strong>A.</strong> his first day at work</span>
+        <span><strong>B.</strong> trying something new</span>
+        <span><strong>C.</strong> take a yoga class</span>
+        <span><strong>D.</strong> learn to drive</span>
+        <span><strong>E.</strong> made sushi</span>
+      </div>
+      <div class="match-row"><span class="match-q"><strong>Conversation 1</strong> · Diego is going to ______ tonight.</span>
+        <select class="match-sel" id="lb1" onchange="mt_saveAll()"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+      <div class="match-row"><span class="match-q"><strong>Conversation 2</strong> · Camila is calling Joaquín because she has never ______ before.</span>
+        <select class="match-sel" id="lb2" onchange="mt_saveAll()"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+      <div class="match-row"><span class="match-q"><strong>Conversation 3</strong> · Martín is nervous because today is ______.</span>
+        <select class="match-sel" id="lb3" onchange="mt_saveAll()"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+      <div class="match-row"><span class="match-q"><strong>All conversations</strong> · In all the conversations, people are ______.</span>
+        <select class="match-sel" id="lb4" onchange="mt_saveAll()"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option></select></div>
+    </div>
+  </div>
+
+  <!-- ============ READING ============ -->
+  <div class="section">
+    <div class="section-header reading"><span class="icon">📖</span><h2>II. Reading</h2><span class="pts">8 points</span></div>
+    <div class="section-body">
+      <div class="part-header">Part A</div>
+      <div class="part-instructions">
+        Read the blog post and answer the questions using full sentences. <strong>(4 points)</strong>
+        <br><button class="es-toggle" onclick="mt_toggleEs('es-ra')">🌐 Ver en español</button>
+        <div class="es-text" id="es-ra">Lee el post del blog y responde las preguntas con oraciones completas. (4 puntos)</div>
+      </div>
+      <div class="reading-text-box">
+        <h4>Our Repair Café</h4>
+        <div class="reading-intro">by Sebastián Muñoz</div>
+        <p>Two years ago, my neighbor Elena had a simple idea. She was tired of seeing people throw away old lamps, chairs and radios, so she opened a Repair Café in her garage in Valparaíso. Once a month, on Saturday, people bring things that don't work, and volunteers try to fix them for free.</p>
+        <p>The volunteers are an interesting group. Most of them are retired engineers and electricians, and they are very patient and generous with their time. Elena says they love teaching more than repairing. While they work, visitors drink tea and watch, and many of them learn to fix things themselves.</p>
+        <p>So far, the café has repaired more than 800 objects. My favorite story is about a little girl who brought a broken music box. It was a present from her grandmother. After an hour, the music box played again, and everyone in the garage clapped.</p>
+        <p>Elena doesn't earn any money from the café, but she says it's the best job she has ever had. Next year, she is going to open a second Repair Café in a school.</p>
+      </div>
+      <div class="q-block"><div class="q-label"><span class="q-num">1.</span>What are the volunteers like?<span class="q-pts">1 pt</span></div><textarea class="ans" id="ra1" oninput="mt_saveAll()"></textarea></div>
+      <div class="q-block"><div class="q-label"><span class="q-num">2.</span>What happened to the girl's music box?<span class="q-pts">1 pt</span></div><textarea class="ans" id="ra2" oninput="mt_saveAll()"></textarea></div>
+      <div class="q-block"><div class="q-label"><span class="q-num">3.</span>Would you like to volunteer at a Repair Café? Why or why not?<span class="q-pts">2 pts</span></div><textarea class="ans" id="ra3" oninput="mt_saveAll()"></textarea></div>
+
+      <hr class="part-divider">
+      <div class="part-header">Part B</div>
+      <div class="part-instructions">
+        Read the email below and answer the questions by selecting the correct option. <strong>(4 points, 1 each)</strong>
+        <br><button class="es-toggle" onclick="mt_toggleEs('es-rb')">🌐 Ver en español</button>
+        <div class="es-text" id="es-rb">Lee el email y responde las preguntas seleccionando la opción correcta. (4 puntos, 1 cada una)</div>
+      </div>
+      <div class="reading-text-box email-box">
+        <div class="email-meta"><strong>From:</strong> Carolina Vidal<br><strong>To:</strong> New volunteers<br><strong>Subject:</strong> Next beach clean-up</div>
+        <p>Hi everyone,</p>
+        <p>Thank you for joining Fundación Mar Limpio this year! Before our next activity, I'd like to ask you a few questions.</p>
+        <p>First, <strong>(1)</strong> what did you think of our first beach clean-up last Sunday? Some of you told me it was hard work, but fun.</p>
+        <p>Our next clean-up is on Saturday, December 13th, at Playa Las Salinas. We are going to start at 9 a.m. and finish at 1 p.m. <strong>(2)</strong> Will you come?</p>
+        <p>I'm also making a list of everyone's experience. <strong>(3)</strong> Have you ever worked as a volunteer before? Tell me what you did.</p>
+        <p><strong>(4)</strong> What kind of tasks do you usually enjoy more: working outside or helping in our office?</p>
+        <p>Finally, <strong>(5)</strong> what are you going to do next year? We need people for our summer program in January.</p>
+        <p>Thanks again, and see you soon!</p>
+        <p><strong>Carolina Vidal</strong><br><strong>Volunteer Coordinator, Fundación Mar Limpio</strong></p>
+      </div>
+      <div class="mc-q" id="rb-q-1"><div class="q-label"><span class="q-num">1.</span>Why is Carolina writing this email?</div>
+        <label class="mc-opt"><input type="radio" name="rb1" value="a" onchange="mt_saveAll()"> a) To change the date of the clean-up</label>
+        <label class="mc-opt"><input type="radio" name="rb1" value="b" onchange="mt_saveAll()"> b) To ask the volunteers some questions</label>
+        <label class="mc-opt"><input type="radio" name="rb1" value="c" onchange="mt_saveAll()"> c) To invite them to a party</label>
+        <label class="mc-opt"><input type="radio" name="rb1" value="d" onchange="mt_saveAll()"> d) To sell tickets for an event</label></div>
+      <div class="mc-q" id="rb-q-2"><div class="q-label"><span class="q-num">2.</span>What does Carolina want to know about the volunteers' experience?</div>
+        <label class="mc-opt"><input type="radio" name="rb2" value="a" onchange="mt_saveAll()"> a) How many hours they work</label>
+        <label class="mc-opt"><input type="radio" name="rb2" value="b" onchange="mt_saveAll()"> b) Where they studied</label>
+        <label class="mc-opt"><input type="radio" name="rb2" value="c" onchange="mt_saveAll()"> c) If they have a car</label>
+        <label class="mc-opt"><input type="radio" name="rb2" value="d" onchange="mt_saveAll()"> d) If they have volunteered before</label></div>
+      <div class="mc-q" id="rb-q-3"><div class="q-label"><span class="q-num">3.</span>What time does the next clean-up start?</div>
+        <label class="mc-opt"><input type="radio" name="rb3" value="a" onchange="mt_saveAll()"> a) At 9 a.m.</label>
+        <label class="mc-opt"><input type="radio" name="rb3" value="b" onchange="mt_saveAll()"> b) At 1 p.m.</label>
+        <label class="mc-opt"><input type="radio" name="rb3" value="c" onchange="mt_saveAll()"> c) At 10 a.m.</label>
+        <label class="mc-opt"><input type="radio" name="rb3" value="d" onchange="mt_saveAll()"> d) In the afternoon</label></div>
+      <div class="mc-q" id="rb-q-4"><div class="q-label"><span class="q-num">4.</span>What is Carolina's job?</div>
+        <label class="mc-opt"><input type="radio" name="rb4" value="a" onchange="mt_saveAll()"> a) She is a new volunteer</label>
+        <label class="mc-opt"><input type="radio" name="rb4" value="b" onchange="mt_saveAll()"> b) She is a beach lifeguard</label>
+        <label class="mc-opt"><input type="radio" name="rb4" value="c" onchange="mt_saveAll()"> c) She is the volunteer coordinator</label>
+        <label class="mc-opt"><input type="radio" name="rb4" value="d" onchange="mt_saveAll()"> d) She is the president of the foundation</label></div>
+    </div>
+  </div>
+
+  <!-- ============ WRITING ============ -->
+  <div class="section">
+    <div class="section-header writing"><span class="icon">✍️</span><h2>III. Writing</h2><span class="pts">12 points</span></div>
+    <div class="section-body">
+      <div class="part-instructions">
+        Read Carolina's email in Reading Part B again and write a reply. Answer all five questions in her email. Write at least 80 words. Use the grammar and vocabulary seen in class. <strong>(12 points)</strong>
+        <br><button class="es-toggle" onclick="mt_toggleEs('es-wr')">🌐 Ver en español</button>
+        <div class="es-text" id="es-wr">Vuelve a leer el email de Carolina del Reading B y escribe una respuesta. Contesta las cinco preguntas de su email. Escribe al menos 80 palabras. Usa la gramática y el vocabulario vistos en clase. (12 puntos)</div>
+      </div>
+      <div class="writing-prompt">
+        <strong>Carolina's questions</strong> <span style="font-size:.85em;color:var(--muted)">(ayuda de práctica: en el examen tendrás que volver al email)</span>
+        <ol style="padding-left:20px;margin-top:6px">
+          <li>What did you think of our first beach clean-up last Sunday?</li>
+          <li>Will you come? (Saturday, December 13th)</li>
+          <li>Have you ever worked as a volunteer before? Tell me what you did.</li>
+          <li>What kind of tasks do you usually enjoy more: working outside or helping in our office?</li>
+          <li>What are you going to do next year?</li>
+        </ol>
+        <div style="font-size:.88em;margin-top:6px"><em>Hi Carolina, … Best regards, [your name]</em></div>
+      </div>
+      <textarea class="writing-textarea" id="writingText" placeholder="Start writing here…" oninput="mt_updateWordCount();mt_saveAll()"></textarea>
+      <div class="word-counter" id="wordCount">Palabras: 0 / mínimo 80</div>
+      <button class="gemini-btn" onclick="mt_copyForGemini('w')">🤖 Copiar prompt de evaluación para Gemini</button>
+      <div class="gemini-warn" id="geminiWarnW">⚠️ <span>Primero escribe tu texto. No hay nada que evaluar todavía.</span></div>
+
+      <div class="rubric-box">
+        <div class="rubric-title">📋 Rúbrica de Writing</div>
+        <div class="rubric-note">Completa esta rúbrica usando la evaluación por criterio que te entregó Gemini. Selecciona el nivel que Gemini indicó para cada criterio.</div>
+        <div id="rubricContainer"></div>
+        <div class="rubric-subtotal" id="rubricSubtotal">Puntaje Writing: — / 12</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="blankWarning" style="display:none;">
+    <strong>⚠️ Hay preguntas sin responder:</strong>
+    <ul id="blankList"></ul>
+    <p style="margin-bottom:10px">Puedes continuar igual: las preguntas sin responder recibirán 0 puntos.</p>
+    <button class="dismiss-btn" onclick="document.getElementById('blankWarning').style.display='none';mt_calculateFinalGrade()">Continuar de todos modos →</button>
+  </div>
+  <button class="calculate-btn" onclick="mt_checkBlanksAndCalculate()">📊 Calcular mi nota</button>
+
+  <!-- ============ RESULTS ============ -->
+  <div id="results">
+    <div class="results-card">
+      <h3 id="resultsTitle">📊 Resultados del Mock Test</h3>
+      <div class="score-row"><span>Listening</span><span id="listeningDisplay">—</span></div>
+      <div class="score-row"><span>Reading</span><span id="readingDisplay">—</span></div>
+      <div class="score-row"><span>Writing</span><span id="writingDisplay">—</span></div>
+      <div class="score-row total-row"><span>Total</span><span id="totalDisplay">—</span></div>
+      <div id="gradeBox"></div>
+    </div>
+
+    <div class="summary-cards">
+      <div class="sum-card"><div class="t">🎧 Listening</div><div class="s" id="sumLText">—</div><div class="summary-dots" id="sumL"></div></div>
+      <div class="sum-card"><div class="t">📖 Reading</div><div class="s" id="sumRText">—</div><div class="summary-dots" id="sumR"></div></div>
+      <div class="sum-card"><div class="t">✍️ Writing</div><div class="s" id="sumWText">—</div><div class="summary-dots" id="sumW"></div></div>
+    </div>
+
+    <div class="gemini-block" id="geminiBlock">
+      <h3>🤖 Revisión con Gemini</h3>
+      <p class="note">Reading A y el Writing se revisan con Gemini. Copia el prompt, pégalo en Gemini y escribe aquí los puntajes del <strong>Bloque 2</strong>. Las preguntas que dejaste en blanco ya tienen 0 pts asignado automáticamente.</p>
+      <div class="gr-group">
+        <h4>📖 Reading · Part A</h4>
+        <button class="gemini-btn" onclick="mt_copyForGemini('ra')">🤖 Copiar prompt de Reading A</button>
+        <div class="gemini-warn" id="geminiWarnRA">⚠️ <span>No respondiste ninguna pregunta de Reading A.</span></div>
+        <div style="margin-top:12px">
+          <div class="gr-row"><label for="g_ra1">📝 Pregunta 1 (máx. 1 pt)</label><input type="number" id="g_ra1" min="0" max="1" step="0.5" oninput="mt_saveAll()"></div>
+          <div class="gr-row"><label for="g_ra2">📝 Pregunta 2 (máx. 1 pt)</label><input type="number" id="g_ra2" min="0" max="1" step="0.5" oninput="mt_saveAll()"></div>
+          <div class="gr-row"><label for="g_ra3">📝 Pregunta 3 (máx. 2 pts)</label><input type="number" id="g_ra3" min="0" max="2" step="0.5" oninput="mt_saveAll()"></div>
+        </div>
+      </div>
+      <div class="gr-group">
+        <h4>✍️ Writing</h4>
+        <p style="font-size:.86em;color:var(--muted)">Usa el botón de Gemini de la sección Writing y completa la rúbrica que está ahí.</p>
+      </div>
+      <div class="gemini-warn" id="updateWarn">⚠️ <span></span></div>
+      <button class="update-btn" onclick="mt_updateWithGeminiScores()">✅ Actualizar nota con los puntajes de Gemini</button>
+    </div>
+
+    <div class="partial-feedback-bar" id="partialBar" style="display:none;">
+      <p>⏳ <strong>Retroalimentación completa pendiente.</strong> Completa la revisión con Gemini para ver tu nota y toda la retroalimentación.</p>
+      <button id="partialBtn" onclick="mt_togglePartialFeedback()">👁 Ver retroalimentación parcial</button>
+    </div>
+
+    <div id="feedbackSection" style="display:none;">
+      <div class="filter-tabs" id="filterTabs" style="display:none;">
+        <button class="filter-tab active" onclick="mt_filterFeedback('all', event)">Todas</button>
+        <button class="filter-tab" onclick="mt_filterFeedback('listening', event)">🎧 Listening</button>
+        <button class="filter-tab" onclick="mt_filterFeedback('reading', event)">📖 Reading</button>
+        <button class="filter-tab" onclick="mt_filterFeedback('writing', event)">✍️ Writing</button>
+        <button class="filter-tab" onclick="mt_filterFeedback('correct', event)">✓ Correctas</button>
+        <button class="filter-tab" onclick="mt_filterFeedback('incorrect', event)">✗ Incorrectas</button>
+      </div>
+      <div id="partialNote" style="display:none;" class="partial-feedback-bar">👁 Mostrando solo las secciones corregidas automáticamente (Listening A y B, Reading B).</div>
+      <div id="msgListening"></div>
+      <div id="fbListening"></div>
+      <div id="msgReading"></div>
+      <div id="fbReading"></div>
+      <div id="fbWriting"></div>
+    </div>
+  </div>
+<div class="modal-overlay" id="geminiSuccessModal">
+  <div class="modal">
+    <span class="modal-icon">📋</span>
+    <h3>¡Texto copiado!</h3>
+    <p style="font-size:.9em;color:var(--muted);margin-bottom:12px">El prompt con tus respuestas ya está en el portapapeles.</p>
+    <ol>
+      <li>Haz clic en <strong>Abrir Gemini</strong>.</li>
+      <li>Pega el texto con <span class="modal-key">Ctrl+V</span> o <span class="modal-key">Cmd+V</span> y envíalo.</li>
+      <li>Ingresa los puntajes del <strong>Bloque 2</strong> en esta página.</li>
+    </ol>
+    <div class="modal-btns">
+      <button class="modal-btn cancel" onclick="mt_closeModal('geminiSuccessModal')">Cerrar</button>
+      <button class="modal-btn go" onclick="mt_closeModal('geminiSuccessModal');window.open('https://gemini.google.com/','_blank')">Abrir Gemini ↗</button>
+    </div>
+  </div>
+</div>
+<div id="saveToast">✓ Respuestas guardadas</div>
+
+</section>
+
+
+<!-- ==================== SPEAKING ==================== -->
+<section class="tab-panel" id="tab-speaking">
+  <div class="panel-title"><div class="section-icon ic-s">🎤</div><div><h2>Speaking</h2><p>12 puntos · 10% de tu nota final.</p></div></div>
+  <div class="esencial"><span class="box-title">⭐ Lo esencial</span><ol>
+    <li>Responde con <strong>Respuesta + Razón + Ejemplo</strong> (unas 3 oraciones).</li>
+    <li>Usa el tiempo verbal que pide la pregunta: pasado, present perfect, futuro o comparativo.</li>
+    <li>En pareja, sus preguntas deben ser <strong>distintas</strong>.</li>
+    <li>En vez de silencio: <em>Well… / Let me think…</em></li>
+    <li>Usa a propósito <strong>6 palabras del nivel</strong>.</li>
+  </ol></div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-s">Sección 1</span>Tarea individual<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> eliges una tarjeta con 2 preguntas y respondes cada una con ideas completas.</p>
+      <div class="tip-box"><span class="box-title">🧩 Fórmula: Respuesta + Razón + Ejemplo</span><em>I'd say… <strong>because</strong>… <strong>For example</strong>,…</em></div>
+      <div class="table-wrap"><table class="gt">
+        <tr><th>Construct</th><th>Pregunta modelo</th><th>Inicio de respuesta</th></tr>
+        <tr><td>Describir personas</td><td>Describe a neighbor you know. What is he/she like?</td><td>My neighbor is friendly and talkative, but…</td></tr>
+        <tr><td><span class="t-past">Past simple</span></td><td>Tell me about a birthday you remember.</td><td>When I turned 18, my friends organized…</td></tr>
+        <tr><td><span class="t-pp">Present perfect</span></td><td>Have you learned something new this year?</td><td>Yes, I have. I've learned to… I started in March…</td></tr>
+        <tr><td><span class="t-fut">Futuro</span></td><td>What are you going to do on your next birthday?</td><td>I'm going to… because…</td></tr>
+        <tr><td><span class="t-comp">Comparativos</span></td><td>Compare studying online and studying in a classroom.</td><td>Studying online is more comfortable, but classrooms are…</td></tr>
+        <tr><td><span class="t-cont">Describir una imagen</span></td><td>Describe what people are doing in a picture of a park.</td><td>In the picture, some kids are playing and a man is…</td></tr>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-s">Sección 2</span>Interacción en pareja<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <p><strong>Cómo funciona:</strong> les toca un tema. Cada uno <strong>hace 2 preguntas y responde 2</strong>, y <strong>las preguntas no se pueden repetir</strong>.</p>
+      <h3 class="sub">Tipos de tema y su gramática</h3>
+      <ul class="clean">
+        <li>Describir a una persona <em>(What is he like? / What does she look like?)</em></li>
+        <li>Algo que pasó <em>(<span class="t-past">What did you…? Where did you…?</span>)</em></li>
+        <li>Experiencias recientes <em>(<span class="t-pp">Have you… recently? What have you…?</span>)</em></li>
+        <li>Planes <em>(<span class="t-fut">What are you going to…? When are you…?</span>)</em></li>
+        <li>Comparar lugares o cosas <em>(<span class="t-comp">Which is better…? Why is it bigger…?</span>)</em></li>
+      </ul>
+      <h3 class="sub">Ejemplo · Ask your partner about his/her favorite sport</h3>
+      <div class="dialog">
+        <p><b>A:</b> What sport do you like? &nbsp; <b>B:</b> I like volleyball.</p>
+        <p><b>A:</b> How often do you play it? &nbsp; <b>B:</b> I play every Friday.</p>
+        <p><b>B:</b> Have you ever played in a team? &nbsp; <b>A:</b> Yes, I played at school.</p>
+        <p><b>B:</b> Is volleyball better than football? &nbsp; <b>A:</b> Yes, it's more fun.</p>
+      </div>
+      <div class="tip-box"><span class="box-title">🤝 Tip</span>Pónganse de acuerdo antes. Si tu compañero pregunta en presente, tú usa pasado o present perfect. Así no repiten preguntas y muestran más gramática.</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <button class="acc-header" onclick="toggleAcc(this)"><span class="acc-tag tag-s">Rúbrica</span>Rúbrica oral (12 pts)<span class="acc-arrow">▼</span></button>
+    <div class="acc-body">
+      <div class="table-wrap"><table class="rub oral">
+        <tr><th>Criterio</th><th>Totalmente Logrado (100%)</th><th>Logrado (80%)</th><th>Parcialmente Logrado (60%)</th><th>Insuficientemente Logrado (30%)</th><th>No Logrado (0%)</th></tr>
+        <tr><td class="crit">1. Coherencia y fluidez</td>
+          <td><span class="pts">4 pts</span>Realiza todas las tareas de manera coherente al estímulo y de forma fluida, presentando hasta 3 interrupciones de la continuidad o autocorrecciones menores.</td>
+          <td><span class="pts">3,2 pts</span>Realiza todas las tareas de manera coherente al estímulo y de forma mayormente fluida, presentando hasta 4 interrupciones de la continuidad o autocorrecciones que no afectan la comprensión.</td>
+          <td><span class="pts">2,4 pts</span>Realiza todas las tareas, presentando solo un caso de incoherencia según el estímulo y una fluidez parcial con hasta 5 interrupciones de la continuidad, repeticiones o titubeos que afectan parcialmente la comprensión.</td>
+          <td><span class="pts">1,2 pts</span>Realiza una o ambas tareas, pero 2 o más ideas son inconsistentes con el estímulo y la fluidez es limitada, con 6 o 7 interrupciones de la continuidad, titubeos y/o repeticiones que dificultan significativamente la comprensión.</td>
+          <td><span class="pts">0 pts</span>Las ideas son total o mayoritariamente incoherentes respecto del estímulo y presenta 8 o más interrupciones de la continuidad, titubeos y/o repeticiones que impiden la comprensión. No responde o sus respuestas no corresponden al estímulo.</td></tr>
+        <tr><td class="crit">2. Vocabulario</td>
+          <td><span class="pts">3 pts</span>Utiliza correctamente 6 o más palabras del vocabulario aprendido, en contextos adecuados al estímulo.</td>
+          <td><span class="pts">2,4 pts</span>Utiliza correctamente al menos 5 palabras del vocabulario aprendido, en contextos adecuados.</td>
+          <td><span class="pts">1,8 pts</span>Utiliza correctamente al menos 4 palabras del vocabulario aprendido, en contextos adecuados.</td>
+          <td><span class="pts">0,9 pts</span>Utiliza correctamente al menos 3 palabras del vocabulario aprendido, en contextos adecuados.</td>
+          <td><span class="pts">0 pts</span>Utiliza correctamente 2 o menos palabras del vocabulario aprendido o utiliza el vocabulario de forma incorrecta. No responde o sus respuestas no corresponden al estímulo.</td></tr>
+        <tr><td class="crit">3. Gramática</td>
+          <td><span class="pts">3 pts</span>Las oraciones son gramaticalmente correctas, pudiendo presentar un error sin impacto en la comprensión.</td>
+          <td><span class="pts">2,4 pts</span>Las oraciones son gramaticalmente correctas en su mayoría, pudiendo presentar error en 2 o 3 casos, sin impacto en la comprensión.</td>
+          <td><span class="pts">1,8 pts</span>Las oraciones presentan errores en 4 o 5 casos, lo que dificulta parcialmente la comprensión.</td>
+          <td><span class="pts">0,9 pts</span>Las oraciones presentan errores en 6 u 7 casos, lo que dificulta significativamente la comprensión.</td>
+          <td><span class="pts">0 pts</span>Comete 8 o más errores, lo que dificulta o impide la comprensión. No responde o sus respuestas no corresponden al estímulo.</td></tr>
+        <tr><td class="crit">4. Pronunciación</td>
+          <td><span class="pts">2 pts</span>Presenta máximo 2 errores de pronunciación que no interfieren con la comprensión.</td>
+          <td><span class="pts">1,6 pts</span>Comete 3 a 4 errores de pronunciación, pero el mensaje sigue siendo comprensible.</td>
+          <td><span class="pts">1,2 pts</span>Comete 5 a 6 errores de pronunciación que afectan parcialmente el mensaje.</td>
+          <td><span class="pts">0,6 pts</span>Comete 7 a 8 errores de pronunciación que dificultan significativamente la comprensión.</td>
+          <td><span class="pts">0 pts</span>Comete más de 9 errores de pronunciación o su articulación impide la comprensión. No responde o sus respuestas no corresponden al estímulo.</td></tr>
+      </table></div>
+      <div class="warning-box"><span class="box-title">⚠️ Diferencias con la rúbrica de Writing</span>
+        <ul class="clean"><li><strong>Vocabulario:</strong> en el oral el máximo pide <strong>6 palabras del nivel</strong> (en Writing son 8).</li><li><strong>Fluidez:</strong> se cuentan interrupciones, titubeos y autocorrecciones.</li><li><strong>Gramática:</strong> con 2 o 3 errores ya bajas a 2,4 puntos.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="tip-box"><span class="box-title">💬 Tips para no perder puntos</span>
+    <ul class="clean">
+      <li><strong>Fluidez:</strong> cuando necesites pensar, usa <em>Well…</em>, <em>Let me think…</em> o <em>That's a good question…</em> en vez de quedarte en silencio. Las autocorrecciones cuentan como interrupciones.</li>
+      <li><strong>Vocabulario:</strong> lleva preparadas 6 palabras del nivel.</li>
+      <li><strong>Pronunciación</strong> (errores típicos de hispanohablantes): final <em>-ed</em> (<em>worked</em> /t/, <em>wanted</em> /ɪd/) · no agregar "e" antes de <em>s</em> (<em>eschool</em>) · la <em>-s</em> de la tercera persona · el sonido <em>th</em>.</li>
+    </ul></div>
+</section>
+
+<!-- ==================== PRÁCTICA ORAL ==================== -->
+<section class="tab-panel" id="tab-oral">
+  <div class="panel-title"><div class="section-icon ic-s">🗣️</div><div><h2>Práctica oral</h2><p>Pregunta al azar, 30 segundos para preparar y 1 minuto para responder.</p></div></div>
+  <div class="mode-switch">
+    <button class="mode-btn active" id="modeInd" onclick="setOralMode('ind')">👤 Individual</button>
+    <button class="mode-btn" id="modePair" onclick="setOralMode('pair')">👥 En pareja</button>
+  </div>
+  <div class="oral-card">
+    <div class="construct" id="oralConstruct">—</div>
+    <div class="question" id="oralQuestion">Haz clic en "Nueva pregunta" para empezar.</div>
+    <div id="oralImgWrap" style="display:none;text-align:center;margin:12px 0"><img id="oralImg" alt="Foto para la actividad en pareja" style="max-width:100%;max-height:260px;border-radius:12px"><div class="hint" id="oralImgMiss" style="display:none">📷 Aquí va la foto de la actividad (foto_oral.jpg).</div></div>
+    <div class="hint" id="oralHint"></div>
+  </div>
+  <div style="text-align:center"><button class="btn" onclick="newOralQuestion()">🎲 Nueva pregunta</button></div>
+  <div class="timer-wrap">
+    <div class="timer-box" id="prepBox"><div class="lbl">Preparación</div><div class="time" id="prepTime">0:30</div></div>
+    <div class="timer-box" id="ansBox"><div class="lbl">Respuesta</div><div class="time" id="ansTime">1:00</div></div>
+  </div>
+  <div style="text-align:center">
+    <button class="btn" onclick="startOralTimer()">▶️ Iniciar</button>
+    <button class="btn light" onclick="resetOralTimer()">↺ Reiniciar</button>
+  </div>
+  <h3 class="sub">✅ Autoevaluación (después de responder)</h3>
+  <div class="mini-check" id="oralCheck">
+    <label><input type="checkbox"> <span>Respondí con ideas completas (no solo "yes" o una palabra).</span></label>
+    <label><input type="checkbox"> <span>Usé el tiempo verbal que pedía la pregunta.</span></label>
+    <label><input type="checkbox"> <span>Di una razón (<em>because…</em>) y un ejemplo (<em>for example…</em>).</span></label>
+    <label><input type="checkbox"> <span>Usé al menos 6 palabras del nivel.</span></label>
+    <label><input type="checkbox"> <span>No me quedé en silencio: usé <em>Well… / Let me think…</em></span></label>
+    <label><input type="checkbox"> <span>Pronuncié bien los finales <em>-ed</em> y la <em>-s</em> de la tercera persona.</span></label>
+  </div>
+  <div class="tip-box">💡 Al cambiar de pregunta, la autoevaluación se reinicia.</div>
+</section>
+
+<!-- ==================== CHECKLIST ==================== -->
+<section class="tab-panel" id="tab-checklist">
+  <div class="panel-title"><div class="section-icon ic-c">✅</div><div><h2>Checklist de preparación</h2><p>Tu avance se guarda en este navegador.</p></div></div>
+  <div class="progress-wrap"><div class="progress-fill" id="checkFill"></div></div>
+  <div class="progress-label" id="checkLabel">0 de 0 completados</div>
+  <div id="checklistContainer"></div>
+  <button class="btn light" onclick="resetChecklist()">↺ Reiniciar checklist</button>
+</section>
+
+</div>
+<div class="footer">Guía de estudio · Inglés Intermedio I · EFT</div>
+</div>
+
+<script>
+// ===== TABS =====
+function showTab(id){
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + id));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === id));
+  document.querySelectorAll('.nav-group').forEach(g => {
+    g.classList.toggle('group-active', !!g.querySelector('.tab-btn[data-tab="' + id + '"]'));
+  });
+  try { localStorage.setItem('inu5101_eft_tab_v1', id); } catch(e) {}
+  window.scrollTo({ top: document.getElementById('nav').offsetTop - 10, behavior: 'smooth' });
+}
+
+// ===== ACCORDIONS (uno abierto a la vez por tab) =====
+function toggleAcc(btn){
+  const acc = btn.parentElement;
+  const panel = acc.closest('.tab-panel');
+  const wasOpen = acc.classList.contains('open');
+  panel.querySelectorAll('.accordion.open').forEach(a => a.classList.remove('open'));
+  if (!wasOpen) acc.classList.add('open');
+}
+
+// ===== HELPERS =====
+function parseNum(v){
+  if (v === null || v === undefined) return NaN;
+  const s = String(v).trim().replace(',', '.');
+  if (s === '' || !/^\d+(\.\d+)?$/.test(s)) return NaN;
+  return parseFloat(s);
+}
+function round1(x){ return Math.round(x * 10 + 1e-9) / 10; }
+function fmt(x, d){ return x.toFixed(d).replace('.', ','); }
+function showWarn(id, msg){
+  const el = document.getElementById(id);
+  el.textContent = msg; el.style.display = msg ? 'block' : 'none';
+}
+function gradeClass(n){
+  if (n >= 6.5) return ['rg-1', '🟢 ¡Excelente resultado!'];
+  if (n >= 5.5) return ['rg-2', '🟢 ¡Muy buen trabajo!'];
+  if (n >= 4.0) return ['rg-3', '🟡 Aprobado. ¡Bien hecho!'];
+  if (n >= 3.5) return ['rg-4', '🟠 Estás muy cerca. Cada punto cuenta.'];
+  return ['rg-5', '🔴 Necesitas reforzar. Revisa el Checklist y la Práctica.'];
+}
+// ===== CALCULADORA 1: NOTA FINAL =====
+function calcFinal(){
+  const p = parseNum(document.getElementById('cPromedio').value);
+  const e = parseNum(document.getElementById('cEscrito').value);
+  const o = parseNum(document.getElementById('cOral').value);
+  const res = document.getElementById('resFinal');
+  if ([p, e, o].some(n => isNaN(n) || n < 1 || n > 7)){
+    showWarn('warnFinal', '⚠️ Revisa las tres notas: deben estar entre 1,0 y 7,0.');
+    res.style.display = 'none'; return;
+  }
+  showWarn('warnFinal', '');
+  const cp = p * 0.6, ce = e * 0.3, co = o * 0.1;
+  const exact = cp + ce + co;
+  const final = round1(exact);
+  const [cls, msg] = gradeClass(final);
+  res.innerHTML =
+    '<div class="table-wrap"><table class="gt">' +
+    '<tr><th>Componente</th><th>Nota</th><th>Peso</th><th>Aporta</th></tr>' +
+    '<tr><td>Promedio</td><td>' + fmt(p,1) + '</td><td>× 0,6</td><td>' + fmt(cp,2) + '</td></tr>' +
+    '<tr><td>Escrito</td><td>' + fmt(e,1) + '</td><td>× 0,3</td><td>' + fmt(ce,2) + '</td></tr>' +
+    '<tr><td>Oral</td><td>' + fmt(o,1) + '</td><td>× 0,1</td><td>' + fmt(co,2) + '</td></tr>' +
+    '</table></div>' +
+    '<div class="result-grade ' + cls + '"><div class="num">' + fmt(final,1) + '</div>' +
+    '<div style="font-size:.85em;font-weight:600">Valor exacto: ' + fmt(exact,2) + ' → ' + fmt(final,1) + '</div>' +
+    '<div style="margin-top:6px">' + msg + '</div></div>';
+  res.style.display = 'block';
+}
+
+
+// ===== PRÁCTICA ORAL =====
+const ORAL_IND = [
+  { c: 'Describir personas', q: 'What is your oldest neighbor like?' },
+  { c: 'Describir personas', q: 'What does your favorite cartoon character look like?' },
+  { c: 'Past simple', q: 'What did you do on your last birthday?' },
+  { c: 'Past simple', q: 'Tell me about the first concert you went to.' },
+  { c: 'Past simple', q: 'What was your favorite toy as a child? Why?' },
+  { c: 'Present perfect', q: 'Have you ever cooked a meal for many people? Tell me about it.' },
+  { c: 'Present perfect (superlativo)', q: 'What is the most interesting place you have ever visited?' },
+  { c: 'Present perfect', q: 'Have you started a new hobby recently?' },
+  { c: 'Present perfect (how long)', q: 'How long have you had your phone?' },
+  { c: 'Futuro', q: 'What are you going to do after class today?' },
+  { c: 'Futuro', q: 'What are you going to buy with your next salary?' },
+  { c: 'Futuro', q: "Where are you going to celebrate New Year's Eve?" },
+  { c: 'Comparativos', q: 'Compare cats and dogs as pets.' },
+  { c: 'Comparativos', q: 'Is it better to study in the morning or at night? Why?' },
+  { c: 'Comparativos', q: 'Which is better: the beach or the mountains? Why?' },
+  { c: 'Comparativos', q: 'Compare your phone with your old phone.' },
+  { c: 'Describir lo que ves (presente continuo)', q: 'Look around you now. What are people doing?' },
+  { c: 'Describir lo que ves (presente continuo)', q: 'Imagine a busy street market. What are people doing there?' }
+];
+const ORAL_PAIR = [
+  { c: 'Tema', q: 'Ask your partner about a good neighbor.', h: 'Pista: What is he/she like? · What does he/she look like?' },
+  { c: 'Tema', q: 'Ask your partner about his/her last birthday.', h: 'Pista: past simple · Where did you…? Who…?' },
+  { c: 'Tema', q: 'Ask your partner about his/her first day at a new school or job.', h: 'Pista: past simple · What did you…? How did you feel?' },
+  { c: 'Tema', q: 'Ask your partner about new things he/she has tried this year.', h: 'Pista: Have you ever…? · What have you…?' },
+  { c: 'Tema', q: 'Ask your partner about a concert or event he/she has been to.', h: 'Pista: present perfect + past simple · Have you been to…? When did you go?' },
+  { c: 'Tema', q: 'Ask your partner about his/her plans after graduating.', h: 'Pista: What are you going to…?' },
+  { c: 'Tema', q: "Ask your partner about his/her plans for New Year's Eve.", h: 'Pista: going to · presente continuo (Where are you spending…?)' },
+  { c: 'Tema', q: 'Ask your partner to compare two kinds of music.', h: 'Pista: comparativos · Which is better…? Why is it more…?' },
+  { c: 'Tema', q: 'Ask your partner to compare living in a house and in an apartment.', h: 'Pista: comparativos · better / bigger / more comfortable…' },
+  { c: 'Tema (con foto)', q: 'Ask your partner about the person in the picture.', h: 'Pista: What is he/she like? · What does he/she look like?', img: 'foto_oral.jpg' }
+];
+let oralMode = 'ind';
+let oralLast = -1;
+let oralTimer = null;
+let oralPhase = 'idle';
+let oralRemaining = 0;
+function setOralMode(m){
+  oralMode = m;
+  document.getElementById('modeInd').classList.toggle('active', m === 'ind');
+  document.getElementById('modePair').classList.toggle('active', m === 'pair');
+  oralLast = -1;
+  newOralQuestion();
+}
+function newOralQuestion(){
+  const bank = oralMode === 'ind' ? ORAL_IND : ORAL_PAIR;
+  let k = Math.floor(Math.random() * bank.length);
+  if (bank.length > 1 && k === oralLast) k = (k + 1) % bank.length;
+  oralLast = k;
+  const it = bank[k];
+  document.getElementById('oralConstruct').textContent = it.c;
+  document.getElementById('oralQuestion').textContent = it.q;
+  const _w = document.getElementById('oralImgWrap'), _i = document.getElementById('oralImg'), _m = document.getElementById('oralImgMiss');
+  if (oralMode === 'pair' && it.img){ _m.style.display = 'none'; _i.style.display = ''; _i.onerror = function(){ _i.style.display = 'none'; _m.style.display = 'block'; }; _i.src = it.img; _w.style.display = 'block'; }
+  else { _w.style.display = 'none'; }
+  document.getElementById('oralHint').textContent = oralMode === 'ind' ? 'Recuerda: Respuesta + Razón + Ejemplo.' : it.h;
+  document.querySelectorAll('#oralCheck input').forEach(i => { i.checked = false; });
+  resetOralTimer();
+}
+function fmtTime(s){ return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+function resetOralTimer(){
+  clearInterval(oralTimer); oralTimer = null; oralPhase = 'idle';
+  document.getElementById('prepTime').textContent = '0:30';
+  document.getElementById('ansTime').textContent = '1:00';
+  ['prepBox','ansBox'].forEach(id => document.getElementById(id).classList.remove('running','done'));
+}
+function startOralTimer(){
+  if (oralTimer) return;
+  if (oralPhase === 'idle'){ oralPhase = 'prep'; oralRemaining = 30; }
+  const box = () => document.getElementById(oralPhase === 'prep' ? 'prepBox' : 'ansBox');
+  const lbl = () => document.getElementById(oralPhase === 'prep' ? 'prepTime' : 'ansTime');
+  box().classList.add('running');
+  oralTimer = setInterval(() => {
+    oralRemaining--;
+    lbl().textContent = fmtTime(Math.max(0, oralRemaining));
+    if (oralRemaining <= 0){
+      box().classList.remove('running'); box().classList.add('done');
+      if (oralPhase === 'prep'){ oralPhase = 'ans'; oralRemaining = 60; box().classList.add('running'); }
+      else { clearInterval(oralTimer); oralTimer = null; oralPhase = 'finished'; }
+    }
+  }, 1000);
+}
+
+// ===== CHECKLIST =====
+const CHECK_KEY = 'inu5101_eft_checklist_v1';
+const CHECK_DATA = [
+  { group: '🧩 Gramática', badge: 'g', label: 'Gramática', items: [
+    'Respondo en el mismo tiempo verbal de la pregunta.',
+    'Sé cuándo usar present perfect y cuándo past simple.',
+    'Uso going to para planes y will para decisiones y disponibilidad.',
+    'Uso usually / always / never y prefer en presente simple.',
+    'Hago comparaciones con -er / more … than / better.',
+    'Distingo What is he like? de What does he look like?' ]},
+  { group: '🎧 Listening', badge: 'l', label: 'Listening', items: [
+    'Reconozco ideas dichas con otras palabras (paráfrasis).',
+    'Numero los eventos según el orden en que los escucho.',
+    'Descarto opciones del recuadro según la gramática de la oración y no repito letras.',
+    'Sé encontrar el tema común de varias conversaciones.' ]},
+  { group: '📖 Reading', badge: 'r', label: 'Reading', items: [
+    'Leo las preguntas antes que el texto.',
+    'Respondo con oraciones completas.',
+    'En la pregunta de opinión doy mi opinión y dos razones.',
+    'Busco en el email la oración que confirma cada alternativa.' ]},
+  { group: '✍️ Writing', badge: 'w', label: 'Writing', items: [
+    'Respondo todas las preguntas del email, cada una con 2 oraciones.',
+    'Llego a 80 palabras, 6 ideas y 8 palabras del nivel.',
+    'Revisé los errores que Gemini marcó en el Writing del Ensayo.' ]},
+  { group: '🎤 Speaking', badge: 's', label: 'Speaking', items: [
+    'Respondo con la fórmula Respuesta + Razón + Ejemplo.',
+    'Sé hacer preguntas en distintos tiempos verbales.',
+    'Tengo frases de apoyo para no quedarme en silencio.',
+    'Practiqué al menos 5 preguntas en la Práctica oral.' ]},
+  { group: '📅 Día del examen', badge: 'd', label: 'Día EFT', items: [
+    'Hice el Ensayo completo y revisé mi retroalimentación.',
+    'Llevo lápiz y goma o corrector propios (son obligatorios y no se prestan).',
+    'Sé que debo dar una sola respuesta por ítem: una respuesta doble o ilegible vale 0.',
+    'Recuerdo que los audios suenan 2 veces y que leo las preguntas antes.',
+    'Dejo 3 minutos para revisar la ortografía del Writing.',
+    'Ningún dispositivo electrónico a la vista. Una copia se califica con nota 1,0.' ]}
+];
+function loadChecks(){
+  try { return JSON.parse(localStorage.getItem(CHECK_KEY) || '{}'); } catch(e) { return {}; }
+}
+function renderChecklist(){
+  const state = loadChecks();
+  const cont = document.getElementById('checklistContainer');
+  cont.innerHTML = '';
+  CHECK_DATA.forEach((g, gi) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'check-group';
+    const h = document.createElement('h4'); h.textContent = g.group; wrap.appendChild(h);
+    g.items.forEach((txt, ii) => {
+      const id = 'c' + gi + '_' + ii;
+      const lab = document.createElement('label');
+      lab.className = 'check-item' + (state[id] ? ' done' : '');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.checked = !!state[id];
+      cb.addEventListener('change', () => toggleCheck(id, cb.checked, lab));
+      const span = document.createElement('span'); span.className = 'txt'; span.textContent = txt;
+      const badge = document.createElement('span'); badge.className = 'badge badge-' + g.badge; badge.textContent = g.label;
+      lab.appendChild(cb); lab.appendChild(span); lab.appendChild(badge);
+      wrap.appendChild(lab);
+    });
+    cont.appendChild(wrap);
+  });
+  updateCheckProgress();
+}
+function toggleCheck(id, val, lab){
+  const state = loadChecks();
+  state[id] = val;
+  try { localStorage.setItem(CHECK_KEY, JSON.stringify(state)); } catch(e) {}
+  lab.classList.toggle('done', val);
+  updateCheckProgress();
+}
+function updateCheckProgress(){
+  const total = CHECK_DATA.reduce((a, g) => a + g.items.length, 0);
+  const done = document.querySelectorAll('#checklistContainer input:checked').length;
+  document.getElementById('checkFill').style.width = (total ? done / total * 100 : 0) + '%';
+  document.getElementById('checkLabel').textContent = done === total ? '🎉 ¡Todo listo! ' + done + ' de ' + total + ' completados' : done + ' de ' + total + ' completados';
+}
+function resetChecklist(){
+  try { localStorage.removeItem(CHECK_KEY); } catch(e) {}
+  renderChecklist();
+}
+
+// ===== INIT =====
+window.addEventListener('load', () => {
+  let start = 'panorama';
+  try { start = localStorage.getItem('inu5101_eft_tab_v1') || 'panorama'; } catch(e) {}
+  if (!document.getElementById('tab-' + start)) start = 'panorama';
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + start));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === start));
+  document.querySelectorAll('.nav-group').forEach(g => g.classList.toggle('group-active', !!g.querySelector('.tab-btn[data-tab="' + start + '"]')));
+  renderChecklist();
+});
+</script>
+<script>
+(function(){
+
+// ================= DATA =================
+const SAVE_KEY = 'mocktest_inu5101_eft_mini_v1';
+const TOTAL_QUESTIONS = 20; // LA 4 + LB 4 + RA 3 + RB 4 + Writing 1 + Rúbrica 4
+const MAX = { listening: 8, reading: 8, writing: 12 };
+const MAX_TOTAL = 28;
+
+const LA_ITEMS = [
+  { id: 'la1', text: 'The friends are going to visit a place next to the water.', key: '4',
+    exp: 'Es el último plan: "after that I want to show you the new market by the river". "Next to the water" parafrasea "by the river".' },
+  { id: 'la2', text: 'Someone will be waiting for the visitor when he arrives.', key: '1',
+    exp: 'Es lo primero que menciona: "When your bus arrives, I\'ll be at the station with my dad".' },
+  { id: 'la3', text: "The visitor doesn't need to pay for the evening event.", key: '3',
+    exp: '"I\'ve already bought the tickets, so don\'t worry about that." Si las entradas ya están compradas, Matías no paga. Es el plan de la tarde, el tercero.' },
+  { id: 'la4', text: 'An older family member is preparing a meal.', key: '2',
+    exp: 'Segundo plan: almuerzo en casa de la abuela, que "is making her famous lasagna". "An older family member" parafrasea "my grandmother".' }
+];
+const LB_BOX = { A: 'his first day at work', B: 'trying something new', C: 'take a yoga class', D: 'learn to drive', E: 'made sushi' };
+const LB_ITEMS = [
+  { id: 'lb1', text: 'Conversation 1 · Diego is going to ______ tonight.', key: 'C',
+    exp: 'Diego dice "I\'m going to take a yoga class at the gym". La clase de manejo (D) es el jueves, no esta noche.' },
+  { id: 'lb2', text: 'Conversation 2 · Camila is calling Joaquín because she has never ______ before.', key: 'E',
+    exp: 'Camila dice "I\'m making sushi. I\'ve never made it before". "Has never made" es present perfect.' },
+  { id: 'lb3', text: 'Conversation 3 · Martín is nervous because today is ______.', key: 'A',
+    exp: 'Martín dice "It\'s my first day, and I\'m really nervous".' },
+  { id: 'lb4', text: 'All conversations · In all the conversations, people are ______.', key: 'B',
+    exp: 'Diego prueba yoga, Camila cocina sushi por primera vez y Martín empieza un trabajo nuevo: todos están probando algo nuevo. La opción D sobra.' }
+];
+const RA_ITEMS = [
+  { id: 'ra1', g: 'g_ra1', max: 1, q: 'What are the volunteers like?',
+    model: 'They are very patient and generous with their time.', partial: '"Patient." o un solo adjetivo sin verbo',
+    exp: 'Segundo párrafo: "they are very patient and generous with their time". La pregunta What are … like? pide personalidad.' },
+  { id: 'ra2', g: 'g_ra2', max: 1, q: "What happened to the girl's music box?",
+    model: 'The volunteers repaired it, and it played again after an hour.', partial: '"It played." / "Fixed." (sin oración completa)',
+    exp: 'Tercer párrafo: "After an hour, the music box played again". La pregunta está en pasado simple, así que respondes en pasado simple.' },
+  { id: 'ra3', g: 'g_ra3', max: 2, q: 'Would you like to volunteer at a Repair Café? Why or why not?',
+    model: 'Yes, I would, because I like fixing things, and I could learn a lot from the engineers.', partial: 'Opinión + una sola razón (1 pt)',
+    exp: 'Cualquier opinión vale. Para 2 puntos necesitas tu opinión y dos razones en oraciones completas.' }
+];
+const RB_ITEMS = [
+  { n: 1, name: 'rb1', key: 'b', q: 'Why is Carolina writing this email?',
+    opts: { a: 'To change the date of the clean-up', b: 'To ask the volunteers some questions', c: 'To invite them to a party', d: 'To sell tickets for an event' },
+    exp: 'Al inicio dice "Before our next activity, I\'d like to ask you a few questions". La fecha no cambia y no hay fiesta ni entradas.' },
+  { n: 2, name: 'rb2', key: 'd', q: "What does Carolina want to know about the volunteers' experience?",
+    opts: { a: 'How many hours they work', b: 'Where they studied', c: 'If they have a car', d: 'If they have volunteered before' },
+    exp: 'Pregunta "Have you ever worked as a volunteer before?". Las demás opciones no aparecen en el email.' },
+  { n: 3, name: 'rb3', key: 'a', q: 'What time does the next clean-up start?',
+    opts: { a: 'At 9 a.m.', b: 'At 1 p.m.', c: 'At 10 a.m.', d: 'In the afternoon' },
+    exp: '"We are going to start at 9 a.m. and finish at 1 p.m." Ojo: 1 p.m. es la hora de término.' },
+  { n: 4, name: 'rb4', key: 'c', q: "What is Carolina's job?",
+    opts: { a: 'She is a new volunteer', b: 'She is a beach lifeguard', c: 'She is the volunteer coordinator', d: 'She is the president of the foundation' },
+    exp: 'La firma dice "Volunteer Coordinator, Fundación Mar Limpio".' }
+];
+const RUBRIC = [
+  { name: 'rub1', title: '1. Coherencia y Extensión', levels: [
+    ['Totalmente Logrado', 4, 'Usa 80 palabras o más. Desarrolla, al menos, 6 ideas de manera completa y detallada, coherentes con el estímulo.'],
+    ['Logrado', 3.2, 'Usa de 60 a 79 palabras. Desarrolla, al menos, 5 ideas de manera completa y detallada, coherentes con el estímulo.'],
+    ['Parcialmente Logrado', 2.4, 'Usa de 40 a 59 palabras. Desarrolla, al menos, 4 ideas de manera completa, coherentes con el estímulo.'],
+    ['Insuficientemente Logrado', 1.2, 'Usa de 30 a 39 palabras. Desarrolla entre 3 y 2 ideas de manera completa, coherentes con el estímulo.'],
+    ['No Logrado', 0, 'No hay respuesta o escribe menos de 30 palabras.'] ]},
+  { name: 'rub2', title: '2. Vocabulario', levels: [
+    ['Totalmente Logrado', 3, 'Utiliza 8 o más palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.'],
+    ['Logrado', 2.4, 'Utiliza 6 o 7 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.'],
+    ['Parcialmente Logrado', 1.8, 'Utiliza 4 o 5 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.'],
+    ['Insuficientemente Logrado', 0.9, 'Utiliza al menos 3 palabras del vocabulario estudiado, en contextos adecuados y coherentes con el estímulo.'],
+    ['No Logrado', 0, 'Utiliza menos de 2 palabras del vocabulario estudiado, y/o no se ajustan al estímulo.'] ]},
+  { name: 'rub3', title: '3. Gramática', levels: [
+    ['Totalmente Logrado', 3, 'Aplica las reglas gramaticales, conjuga los tiempos verbales y estructura las oraciones correctamente en todos los casos, sin errores.'],
+    ['Logrado', 2.4, 'Correcto en la mayoría de los casos, con entre 2 y 3 errores que no afectan la comprensión del texto.'],
+    ['Parcialmente Logrado', 1.8, 'Correcto en algunos casos, con entre 4 y 5 errores; en general el texto sigue siendo comprensible.'],
+    ['Insuficientemente Logrado', 0.9, 'Hasta 6 errores que limitan y obstaculizan la claridad del mensaje.'],
+    ['No Logrado', 0, '7 o más errores gramaticales que impiden la comprensión del mensaje.'] ]},
+  { name: 'rub4', title: '4. Ortografía', levels: [
+    ['Totalmente Logrado', 2, '1 o 2 errores ortográficos en todo el texto que no afectan el mensaje.'],
+    ['Logrado', 1.6, '3 o 4 errores ortográficos que no afectan en general el mensaje.'],
+    ['Parcialmente Logrado', 1.2, '5 o 6 errores ortográficos que afectan parcialmente el mensaje.'],
+    ['Insuficientemente Logrado', 0.6, '7 a 9 errores ortográficos que afectan la idea principal del mensaje.'],
+    ['No Logrado', 0, 'Más de 10 errores que afectan la comprensión.'] ]}
+];
+const GEMINI_INPUTS = ['g_ra1','g_ra2','g_ra3'];
+const TEXT_IDS = ['studentName','la1','la2','la3','la4','lb1','lb2','lb3','lb4','ra1','ra2','ra3','writingText'].concat(GEMINI_INPUTS);
+const RADIO_NAMES = ['rb1','rb2','rb3','rb4','rub1','rub2','rub3','rub4'];
+
+let autoGeminiDone = false;
+let partialOn = false;
+
+// ================= HELPERS =================
+function g(id){ const el = document.getElementById(id); return el ? el.value : ''; }
+function getRadio(name){ const c = document.querySelector('input[name="' + name + '"]:checked'); return c ? c.value : ''; }
+function fmt(x){ return (Math.round(x * 10) / 10).toString().replace('.', ','); }
+function ptsLabel(x){ return x === 1 ? 'pt' : 'pts'; }
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function countWords(t){ return t.trim().split(/\s+/).filter(w => w.length > 0).length; }
+function toggleEs(id){ document.getElementById(id).classList.toggle('show'); }
+function calcGrade(score, maxScore){
+  const pct = (score / maxScore) * 100;
+  const grade = pct < 60 ? (1 + (pct / 60) * 3) : (4 + ((pct - 60) / 40) * 3);
+  return Math.min(7, Math.max(1, Math.round(grade * 10 + 1e-9) / 10));
+}
+function fmtGrade(x){ return x.toFixed(1).replace('.', ','); }
+function clampScore(id, max){
+  let v = parseFloat(String(g(id)).replace(',', '.'));
+  if (isNaN(v) || v < 0) v = 0;
+  return Math.min(max, v);
+}
+
+// ================= RUBRIC =================
+function renderRubric(){
+  const cont = document.getElementById('rubricContainer');
+  cont.innerHTML = RUBRIC.map((c, ci) =>
+    '<div class="criterion" id="rub-' + (ci + 1) + '"><h4>' + c.title + '</h4><div class="criterion-options">' +
+    c.levels.map(l =>
+      '<label><input type="radio" name="' + c.name + '" value="' + l[1] + '" onchange="mt_updateRubric();mt_saveAll()">' +
+      '<div><div class="rub-level">' + l[0] + ' <span class="rub-pts">' + fmt(l[1]) + ' ' + ptsLabel(l[1]) + '</span></div><div class="rub-desc">' + l[2] + '</div></div>' +
+      '<span class="check-icon">✓</span></label>').join('') +
+    '</div></div>').join('');
+}
+function rubricScore(){
+  let total = 0, complete = true;
+  RUBRIC.forEach(c => { const v = getRadio(c.name); if (v === '') complete = false; else total += parseFloat(v); });
+  return { total, complete };
+}
+function updateRubric(){
+  const r = rubricScore();
+  document.getElementById('rubricSubtotal').textContent = 'Puntaje Writing: ' + (r.complete ? fmt(r.total) : '—') + ' / 12';
+}
+
+// ================= AUDIO =================
+const playCounts = {};
+function trackPlay(audioId){
+  playCounts[audioId] = (playCounts[audioId] || 0) + 1;
+  const c = document.getElementById('counter_' + audioId);
+  const n = playCounts[audioId];
+  if (n >= 2){ c.textContent = '⚠️ Reproducciones: ' + n + ' / 2 — límite alcanzado'; c.className = 'play-counter limit'; }
+  else { c.textContent = 'Reproducciones: 1 / 2 — te queda 1'; c.className = 'play-counter warning'; }
+}
+
+// ================= SAVE / LOAD =================
+let saveTimer = null;
+function saveAll(){
+  const data = {};
+  TEXT_IDS.forEach(id => { data[id] = g(id); });
+  RADIO_NAMES.forEach(n => { data[n] = getRadio(n); });
+  data.autoGeminiDone = autoGeminiDone;
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(data)); } catch(e) {}
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(flashToast, 300);
+  checkForAnswers();
+  updateProgress();
+}
+function flashToast(){
+  const t = document.getElementById('saveToast'); if (!t) return;
+  t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 1800);
+}
+function loadSaved(){
+  let d = null;
+  try { d = JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); } catch(e) {}
+  if (!d) return;
+  TEXT_IDS.forEach(id => { const el = document.getElementById(id); if (el && d[id] !== undefined) el.value = d[id]; });
+  RADIO_NAMES.forEach(n => { if (d[n]){ const r = document.querySelector('input[name="' + n + '"][value="' + d[n] + '"]'); if (r) r.checked = true; } });
+  autoGeminiDone = !!d.autoGeminiDone;
+}
+function hasAnyAnswer(){
+  return TEXT_IDS.filter(id => !GEMINI_INPUTS.includes(id)).some(id => g(id).trim() !== '') || RADIO_NAMES.some(n => getRadio(n) !== '');
+}
+function checkForAnswers(){
+  document.getElementById('savedBanner').style.display = hasAnyAnswer() ? 'flex' : 'none';
+}
+function clearAllAnswers(){
+  try { localStorage.removeItem(SAVE_KEY); } catch(e) {}
+  TEXT_IDS.forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  document.querySelectorAll('#tab-ensayo input[type="radio"]').forEach(r => { r.checked = false; });
+  GEMINI_INPUTS.forEach(id => { const el = document.getElementById(id); el.readOnly = false; el.classList.remove('locked'); });
+  document.querySelectorAll('.blank-badge').forEach(b => b.remove());
+  autoGeminiDone = false; partialOn = false;
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('blankWarning').style.display = 'none';
+  updateWordCount(); updateRubric(); checkForAnswers(); updateProgress();
+  document.getElementById('tab-ensayo').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ================= PROGRESS / WORDS =================
+function updateProgress(){
+  let answered = 0;
+  ['la1','la2','la3','la4','lb1','lb2','lb3','lb4','ra1','ra2','ra3'].forEach(id => { if (g(id).trim() !== '') answered++; });
+  RADIO_NAMES.forEach(n => { if (getRadio(n) !== '') answered++; });
+  if (g('writingText').trim() !== '') answered++;
+  const pct = Math.round(answered / TOTAL_QUESTIONS * 100);
+  const fill = document.getElementById('progressFill');
+  fill.style.width = pct + '%';
+  fill.className = 'progress-fill' + (answered === TOTAL_QUESTIONS ? ' complete' : '');
+  document.getElementById('progressLabel').textContent = answered === TOTAL_QUESTIONS ? '✅ Todas las preguntas respondidas' : answered + ' de ' + TOTAL_QUESTIONS + ' preguntas respondidas';
+  return answered;
+}
+function updateWordCount(){
+  const n = countWords(g('writingText'));
+  const c = document.getElementById('wordCount');
+  c.textContent = 'Palabras: ' + n + ' / mínimo 80';
+  c.className = 'word-counter' + (n >= 80 ? ' good' : n >= 60 ? ' warn' : n > 0 ? ' bad' : '');
+}
+
+// ================= BLANKS =================
+function scrollToId(id){
+  const el = document.getElementById(id);
+  if (el){ el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.outline = '3px solid #f59e0b'; setTimeout(() => { el.style.outline = ''; }, 2000); if (el.focus) setTimeout(() => el.focus(), 400); }
+}
+function checkBlanksAndCalculate(){
+  const blanks = [];
+  LA_ITEMS.forEach((it, i) => { if (!g(it.id)) blanks.push({ label: 'Listening A — Pregunta ' + (i + 1), target: it.id }); });
+  LB_ITEMS.forEach((it, i) => { if (!g(it.id)) blanks.push({ label: 'Listening B — Pregunta ' + (i + 1), target: it.id }); });
+  RA_ITEMS.forEach((it, i) => { if (!g(it.id).trim()) blanks.push({ label: 'Reading A — Pregunta ' + (i + 1), target: it.id }); });
+  RB_ITEMS.forEach(it => { if (!getRadio(it.name)) blanks.push({ label: 'Reading B — Pregunta ' + it.n, target: 'rb-q-' + it.n }); });
+  if (!g('writingText').trim()) blanks.push({ label: 'Writing — Texto', target: 'writingText' });
+  RUBRIC.forEach((c, i) => { if (!getRadio(c.name)) blanks.push({ label: 'Rúbrica de Writing — Criterio ' + (i + 1), target: 'rub-' + (i + 1) }); });
+  const warning = document.getElementById('blankWarning');
+  if (blanks.length === 0){ warning.style.display = 'none'; calculateFinalGrade(); return; }
+  const list = document.getElementById('blankList');
+  list.innerHTML = '';
+  blanks.forEach(b => {
+    const li = document.createElement('li'); const btn = document.createElement('button');
+    btn.className = 'blank-link'; btn.textContent = b.label; btn.onclick = () => scrollToId(b.target);
+    li.appendChild(btn); list.appendChild(li);
+  });
+  warning.style.display = 'block';
+  warning.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ================= GRADING =================
+function gradeAuto(){
+  const la = LA_ITEMS.map(it => ({ it, ans: g(it.id), ok: g(it.id) === it.key }));
+  const lb = LB_ITEMS.map(it => ({ it, ans: g(it.id), ok: g(it.id) === it.key }));
+  const rb = RB_ITEMS.map(it => ({ it, ans: getRadio(it.name), ok: getRadio(it.name) === it.key }));
+  return { la, lb, rb, laScore: la.filter(x => x.ok).length, lbScore: lb.filter(x => x.ok).length, rbScore: rb.filter(x => x.ok).length };
+}
+function applyBlankZeros(){
+  RA_ITEMS.forEach(it => {
+    const scoreEl = document.getElementById(it.g); const row = scoreEl.closest('.gr-row');
+    const oldBadge = row.querySelector('.blank-badge'); if (oldBadge) oldBadge.remove();
+    if (!g(it.id).trim()){
+      scoreEl.value = 0; scoreEl.classList.add('locked'); scoreEl.readOnly = true;
+      const badge = document.createElement('span'); badge.className = 'blank-badge'; badge.textContent = '✗ Sin respuesta — 0 pts';
+      row.appendChild(badge);
+    } else { scoreEl.classList.remove('locked'); scoreEl.readOnly = false; }
+  });
+}
+function geminiScores(){ return { ra: RA_ITEMS.map(it => clampScore(it.g, it.max)) }; }
+function sum(a){ return a.reduce((x, y) => x + y, 0); }
+
+function calculateFinalGrade(){
+  const a = gradeAuto();
+  if (!autoGeminiDone) applyBlankZeros();
+  const gs = geminiScores();
+  const rub = rubricScore();
+  const listening = a.laScore + a.lbScore;
+  const reading = a.rbScore + sum(gs.ra);
+  const writing = rub.total;
+  const total = listening + reading + writing;
+
+  const name = g('studentName').trim();
+  document.getElementById('resultsTitle').textContent = name ? '📊 Resultados de: ' + name : '📊 Resultados del Mock Test';
+  document.getElementById('listeningDisplay').textContent = fmt(listening) + ' / ' + MAX.listening + ' pts';
+
+  if (autoGeminiDone){
+    document.getElementById('readingDisplay').textContent = fmt(reading) + ' / ' + MAX.reading + ' pts';
+    document.getElementById('writingDisplay').textContent = fmt(writing) + ' / ' + MAX.writing + ' pts';
+    document.getElementById('totalDisplay').textContent = fmt(total) + ' / ' + MAX_TOTAL + ' pts';
+    const grade = calcGrade(total, MAX_TOTAL);
+    const color = grade >= 4 ? '#059669' : '#dc2626';
+    const msg = grade >= 6 ? '¡Excelente! Estás muy bien preparado/a.' : grade >= 5 ? '¡Muy bien! Repasa los detalles de la retroalimentación.' : grade >= 4 ? 'Aprobado. Revisa tus errores para subir la nota.' : 'Aún no alcanzas el 4,0. Revisa la retroalimentación y la guía de estudio.';
+    document.getElementById('gradeBox').innerHTML = '<div class="grade-display"><div class="grade-number" style="color:' + color + '">' + fmtGrade(grade) + '</div><div class="grade-label">Nota (escala chilena — 60% = 4,0)</div><div style="font-weight:600;margin-top:8px">' + msg + '</div></div>';
+  } else {
+    document.getElementById('readingDisplay').textContent = 'B: ' + a.rbScore + ' / 4 · A: pendiente';
+    document.getElementById('writingDisplay').textContent = rub.complete ? fmt(writing) + ' / 12 pts' : 'pendiente';
+    document.getElementById('totalDisplay').textContent = '—';
+    document.getElementById('gradeBox').innerHTML = '<div class="grade-display pending"><div style="font-size:2.3em">⏳</div><div style="font-family:\'DM Serif Display\',serif;font-size:1.3em;color:#d97706">Nota pendiente</div><div style="font-size:.85em;color:#92400e;margin-top:6px">Completa la revisión con Gemini y haz clic en "Actualizar nota".</div><div class="bounce">↓</div></div>';
+  }
+
+  buildSummaryDots('sumL', a.la.concat(a.lb).map(x => ({ state: x.ok ? 'correct' : 'incorrect' })));
+  buildSummaryDots('sumR', RA_ITEMS.map((it, i) => ({ state: autoGeminiDone ? (gs.ra[i] >= it.max ? 'correct' : 'incorrect') : 'pending' })).concat(a.rb.map(x => ({ state: x.ok ? 'correct' : 'incorrect' }))));
+  if (autoGeminiDone && rub.complete){
+    buildSummaryDots('sumW', RUBRIC.map(c => ({ state: parseFloat(getRadio(c.name)) >= c.levels[0][1] ? 'correct' : 'incorrect' })));
+  } else {
+    buildSummaryDots('sumW', RUBRIC.map(() => ({ state: 'pending' })));
+  }
+  document.getElementById('sumLText').textContent = fmt(listening) + ' / 8';
+  document.getElementById('sumRText').textContent = autoGeminiDone ? fmt(reading) + ' / 8' : '—/8';
+  document.getElementById('sumWText').textContent = (autoGeminiDone && rub.complete) ? fmt(writing) + ' / 12' : '—/12';
+
+  buildFeedback(a, gs, rub);
+
+  document.getElementById('geminiBlock').style.display = autoGeminiDone ? 'none' : 'block';
+  document.getElementById('partialBar').style.display = autoGeminiDone ? 'none' : 'block';
+  document.getElementById('filterTabs').style.display = autoGeminiDone ? 'flex' : 'none';
+  document.getElementById('partialNote').style.display = (!autoGeminiDone && partialOn) ? 'block' : 'none';
+  document.getElementById('feedbackSection').style.display = (autoGeminiDone || partialOn) ? 'block' : 'none';
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+function buildSummaryDots(containerId, items){
+  const c = document.getElementById(containerId); if (!c) return;
+  c.innerHTML = items.map((it, i) => '<div class="dot ' + it.state + '" title="Pregunta ' + (i + 1) + '"></div>').join('');
+}
+function updateWithGeminiScores(){
+  const warn = document.getElementById('updateWarn');
+  const missing = GEMINI_INPUTS.filter(id => { const el = document.getElementById(id); return !el.readOnly && el.value === ''; });
+  const rub = rubricScore();
+  const msgs = [];
+  if (missing.length) msgs.push('Faltan ' + missing.length + ' puntajes de Gemini (se contarán como 0).');
+  if (!rub.complete) msgs.push('La rúbrica de Writing está incompleta.');
+  if (msgs.length && warn.dataset.confirmed !== '1'){
+    warn.querySelector('span').textContent = msgs.join(' ') + ' Haz clic de nuevo en "Actualizar nota" para continuar igual.';
+    warn.classList.add('visible'); warn.dataset.confirmed = '1'; return;
+  }
+  warn.classList.remove('visible'); warn.dataset.confirmed = '';
+  autoGeminiDone = true; partialOn = false;
+  saveAll();
+  calculateFinalGrade();
+}
+function togglePartialFeedback(){
+  partialOn = !partialOn;
+  document.getElementById('partialBtn').textContent = partialOn ? '🙈 Ocultar retroalimentación parcial' : '👁 Ver retroalimentación parcial';
+  document.getElementById('partialNote').style.display = partialOn ? 'block' : 'none';
+  document.getElementById('feedbackSection').style.display = partialOn ? 'block' : 'none';
+}
+
+// ================= FEEDBACK =================
+function sectionMsg(correct, total, tips){
+  const pct = total ? correct / total : 0;
+  let level, title, intro;
+  if (pct >= 0.83){ level = 'great'; title = '🌟 ¡Excelente!'; intro = ' Tu desempeño en esta sección fue sobresaliente.'; }
+  else if (pct >= 0.58){ level = 'good'; title = '👍 Buen trabajo'; intro = ' Estás en el camino correcto. Revisa estos puntos:'; }
+  else { level = 'needswork'; title = '📚 Necesitas practicar más'; intro = ' Presta atención a estas áreas:'; }
+  const tipsHtml = tips.length ? '<ul class="msg-tips">' + tips.map(t => '<li>' + t + '</li>').join('') + '</ul>' : '';
+  return '<div class="section-feedback-msg ' + level + '"><strong>' + title + '</strong>' + intro + tipsHtml + '</div>';
+}
+function tagFor(score, max){
+  if (score >= max) return '<span class="tag correct-tag">✅ Correcto</span>';
+  if (score > 0) return '<span class="tag partial-tag">◐ Parcial</span>';
+  return '<span class="tag incorrect-tag">❌ Incorrecto</span>';
+}
+function okTag(ok){ return ok ? '<span class="tag correct-tag">✅ Correcto</span>' : '<span class="tag incorrect-tag">❌ Incorrecto</span>'; }
+function letterText(l){ return l ? l + ') ' + LB_BOX[l] : 'Sin respuesta'; }
+
+function buildFeedback(a, gs, rub){
+  const showGem = autoGeminiDone;
+  // LISTENING
+  let lHtml = '<div class="feedback-part" data-section="listening"><div class="feedback-part-header listening">🎧 Listening · Part A (ordenar eventos)</div>';
+  a.la.forEach((x, i) => {
+    lHtml += '<div class="feedback-item ' + (x.ok ? 'fb-correct' : 'fb-incorrect') + '"><div class="fb-q">' + (i + 1) + '. ' + esc(x.it.text) + okTag(x.ok) + '</div>' +
+      '<div class="student-ans">Tu respuesta: ' + (x.ans || 'Sin respuesta') + '</div><div class="correct-ans">Respuesta correcta: ' + x.it.key + '</div><div class="explanation">💡 ' + x.it.exp + '</div></div>';
+  });
+  lHtml += '</div><div class="feedback-part" data-section="listening"><div class="feedback-part-header listening">🎧 Listening · Part B (completar con letras)</div>';
+  a.lb.forEach((x, i) => {
+    lHtml += '<div class="feedback-item ' + (x.ok ? 'fb-correct' : 'fb-incorrect') + '"><div class="fb-q">' + (i + 1) + '. ' + esc(x.it.text) + okTag(x.ok) + '</div>' +
+      '<div class="student-ans">Tu respuesta: ' + esc(letterText(x.ans)) + '</div><div class="correct-ans">Respuesta correcta: ' + esc(letterText(x.it.key)) + '</div><div class="explanation">💡 ' + x.it.exp + '</div></div>';
+  });
+  lHtml += '</div>';
+  document.getElementById('fbListening').innerHTML = lHtml;
+  const lTips = [];
+  if (a.laScore < 4) lTips.push('En Listening A, los eventos están <strong>parafraseados</strong>: escucha la idea, no busques las mismas palabras, y numera según el orden en que los escuchas.');
+  if (!a.lb[0].ok || !a.lb[1].ok || !a.lb[2].ok) lTips.push('En Listening B, revisa qué tipo de palabra pide cada oración (verbo, participio o sustantivo) para descartar opciones antes de escuchar.');
+  if (!a.lb[3].ok) lTips.push('En el ítem del <strong>tema común</strong>, busca una idea general que sirva para todas las conversaciones.');
+  document.getElementById('msgListening').innerHTML = sectionMsg(a.laScore + a.lbScore, 8, lTips);
+
+  // READING
+  let rHtml = '';
+  if (showGem){
+    rHtml += '<div class="feedback-part" data-section="reading"><div class="feedback-part-header reading">📖 Reading · Part A (revisado con Gemini)</div>';
+    RA_ITEMS.forEach((it, i) => {
+      const sc = gs.ra[i];
+      rHtml += '<div class="feedback-item ' + (sc >= it.max ? 'fb-correct' : 'fb-incorrect') + '"><div class="fb-q">' + (i + 1) + '. ' + esc(it.q) + tagFor(sc, it.max) + '</div>' +
+        '<div class="student-ans">Tu respuesta: ' + (g(it.id).trim() ? esc(g(it.id)) : 'Sin respuesta') + ' · <strong>' + fmt(sc) + ' / ' + it.max + ' ' + ptsLabel(it.max) + '</strong></div>' +
+        '<div class="correct-ans">Respuesta modelo: ' + esc(it.model) + '</div><div class="explanation">💡 ' + it.exp + '</div></div>';
+    });
+    rHtml += '</div>';
+  }
+  rHtml += '<div class="feedback-part" data-section="reading"><div class="feedback-part-header reading">📖 Reading · Part B (selección múltiple)</div>';
+  a.rb.forEach(x => {
+    const it = x.it;
+    rHtml += '<div class="feedback-item ' + (x.ok ? 'fb-correct' : 'fb-incorrect') + '"><div class="fb-q">' + it.n + '. ' + esc(it.q) + okTag(x.ok) + '</div>' +
+      '<div class="student-ans">Tu respuesta: ' + (x.ans ? x.ans + ') ' + esc(it.opts[x.ans]) : 'Sin respuesta') + '</div><div class="correct-ans">Respuesta correcta: ' + it.key + ') ' + esc(it.opts[it.key]) + '</div>' +
+      '<div class="explanation">💡 ' + it.exp + '</div></div>';
+  });
+  rHtml += '</div>';
+  document.getElementById('fbReading').innerHTML = rHtml;
+  const rCorrect = a.rbScore + (showGem ? sum(gs.ra) : 0);
+  const rTotal = 4 + (showGem ? 4 : 0);
+  const rTips = [];
+  if (showGem && (gs.ra[0] < 1 || gs.ra[1] < 1)) rTips.push('En Reading A, responde con <strong>oración completa</strong> y en el <strong>mismo tiempo verbal</strong> de la pregunta.');
+  if (showGem && gs.ra[2] < 2) rTips.push('En la pregunta de opinión, da <strong>tu opinión y dos razones</strong> (because… and…).');
+  if (a.rbScore < 4) rTips.push('En Reading B, busca en el email la oración que confirma cada alternativa y lee la <strong>firma</strong> para saber quién escribe.');
+  document.getElementById('msgReading').innerHTML = sectionMsg(rCorrect, rTotal, rTips);
+
+  // WRITING
+  let wHtml = '';
+  if (showGem){
+    wHtml = '<div class="feedback-part" data-section="writing"><div class="feedback-part-header writing">✍️ Writing (rúbrica completada con Gemini)</div>';
+    RUBRIC.forEach(c => {
+      const v = getRadio(c.name); const max = c.levels[0][1];
+      const sc = v === '' ? 0 : parseFloat(v);
+      const lvl = c.levels.find(l => String(l[1]) === v);
+      wHtml += '<div class="feedback-item ' + (sc >= max ? 'fb-correct' : 'fb-incorrect') + '"><div class="fb-q">' + c.title + tagFor(sc, max) + '</div>' +
+        '<div class="student-ans">' + (lvl ? lvl[0] + ' · ' : 'Sin seleccionar · ') + '<strong>' + fmt(sc) + ' / ' + fmt(max) + ' ' + ptsLabel(max) + '</strong></div>' +
+        (sc < max ? '<div class="explanation">💡 Revisa los "Errores específicos" y las "Sugerencias de mejora" que te entregó Gemini para este criterio.</div>' : '') + '</div>';
+    });
+    wHtml += '</div>';
+  }
+  document.getElementById('fbWriting').innerHTML = wHtml;
+}
+function filterFeedback(type, evt){
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  if (evt && evt.target) evt.target.classList.add('active');
+  const parts = document.querySelectorAll('.feedback-part');
+  const items = document.querySelectorAll('.feedback-item');
+  const msgs = [document.getElementById('msgListening'), document.getElementById('msgReading')];
+  if (type === 'correct' || type === 'incorrect'){
+    parts.forEach(p => p.style.display = 'block');
+    items.forEach(it => { const ok = it.classList.contains('fb-correct'); it.style.display = (type === 'correct' ? ok : !ok) ? '' : 'none'; });
+    parts.forEach(p => { const vis = [...p.querySelectorAll('.feedback-item')].some(i => i.style.display !== 'none'); p.style.display = vis ? 'block' : 'none'; });
+    msgs.forEach(m => m.style.display = 'none');
+  } else {
+    items.forEach(i => i.style.display = '');
+    parts.forEach(p => { p.style.display = (type === 'all' || p.dataset.section === type) ? 'block' : 'none'; });
+    msgs[0].style.display = (type === 'all' || type === 'listening') ? '' : 'none';
+    msgs[1].style.display = (type === 'all' || type === 'reading') ? '' : 'none';
+  }
+}
+
+// ================= GEMINI =================
+function buildPrompt(section){
+  let geminiText = '';
+  if (section === 'ra'){
+    geminiText = 'Eres un profesor experto en inglés como lengua extranjera para nivel B1 (CEFR).\n\nUn estudiante de nivel B1 respondió preguntas abiertas sobre el siguiente texto.\n\n' +
+      'TEXTO LEÍDO: Post de blog de Sebastián sobre su vecina Elena, que hace dos años abrió un "Repair Café" en su garaje en Valparaíso: una vez al mes, los sábados, la gente lleva objetos que no funcionan y voluntarios los arreglan gratis. La mayoría de los voluntarios son ingenieros y electricistas jubilados, muy pacientes y generosos con su tiempo; les gusta más enseñar que reparar. El café ha reparado más de 800 objetos. La historia favorita del autor: una niña llevó una caja de música rota, regalo de su abuela; después de una hora la caja volvió a sonar y todos aplaudieron. Elena no gana dinero con el café, pero dice que es el mejor trabajo que ha tenido; el próximo año abrirá un segundo Repair Café en un colegio.\n\n' +
+      'SISTEMA DE PUNTAJE (Reading: se exige oración completa):\n- Preguntas de 1 pt: 1 = oración completa con la información correcta / 0,5 = información correcta pero incompleta (sin verbo, una sola palabra) o con tiempo verbal o sujeto incorrecto / 0 = información incorrecta o sin respuesta.\n- Pregunta de opinión (2 pts): 2 = opinión + dos razones en oraciones completas / 1 = opinión + una razón / 0,5 = opinión con razón poco clara / 0 = solo "Yes" o "No", o sin respuesta. Cualquier opinión (sí o no) es válida si está justificada.\n\n';
+    RA_ITEMS.forEach((it, i) => {
+      geminiText += 'PREGUNTA ' + (i + 1) + ' (máx. ' + it.max + ' ' + ptsLabel(it.max) + '): ' + it.q + '\nRespuesta modelo: ' + it.model + '\nEjemplo de respuesta parcial: ' + it.partial + '\nRespuesta del estudiante: "' + (g(it.id).trim() || '(sin respuesta)') + '"\n\n';
+    });
+    geminiText += 'IMPORTANTE: acepta paráfrasis y errores gramaticales menores si la información es correcta y la respuesta es una oración completa.\n\n' +
+      'ENTREGA TU RESPUESTA EN DOS BLOQUES SEPARADOS Y CLARAMENTE MARCADOS. NO mezcles el contenido de los bloques.\n\n' +
+      '🔷 BLOQUE 1 — EVALUACIÓN\n1. COMENTARIO GENERAL (2–3 oraciones).\n2. EVALUACIÓN POR PREGUNTA: puntaje y justificación breve. En la pregunta de 2 puntos, indica qué razones dio el estudiante y qué faltó.\n3. SUGERENCIAS DE MEJORA (2–3, concretas).\n4. MENSAJE DE CIERRE motivador (una frase).\n\n' +
+      '🔶 BLOQUE 2 — PUNTAJES PARA INGRESAR EN EL MOCK TEST\nPregunta 1 (máx. 1 pt):  ___\nPregunta 2 (máx. 1 pt):  ___\nPregunta 3 (máx. 2 pts):  ___\n─────────────────────────\nTotal sugerido: ___ / 4 pts\n\nTodo en español, excepto los ejemplos en inglés.';
+  } else if (section === 'w'){
+    const text = g('writingText').trim();
+    geminiText = 'Eres un profesor experto en inglés como lengua extranjera para nivel B1 (CEFR).\nUn estudiante de nivel B1, hablante nativo de español, escribió el siguiente texto en inglés.\n\n---\nNÚMERO DE PALABRAS: ' + countWords(text) + ' (mínimo requerido: 80)\n\nTEXTO DEL ESTUDIANTE:\n"' + text + '"\n---\n\n' +
+      'TAREA:\nEl estudiante debía responder un email de Carolina, coordinadora de voluntarios de una fundación que limpia playas, contestando sus cinco preguntas, en al menos 80 palabras. Las preguntas y el tiempo verbal esperado en cada respuesta son:\n' +
+      '1. "What did you think of our first beach clean-up last Sunday?" → pasado simple.\n' +
+      '2. "Will you come?" (próxima limpieza, sábado 13 de diciembre, de 9 a 13 h) → will / can + detalle.\n' +
+      '3. "Have you ever worked as a volunteer before? Tell me what you did." → present perfect + detalle en pasado simple.\n' +
+      '4. "What kind of tasks do you usually enjoy more: working outside or helping in our office?" → presente simple con frecuencia / prefer.\n' +
+      '5. "What are you going to do next year?" → going to / presente continuo con valor futuro.\n' +
+      'Si alguna pregunta del email queda sin responder, cuéntala como idea no desarrollada en el criterio de Coherencia y Extensión.\n\n' +
+      'Se espera además: saludo y cierre de email, y conectores (because, so, also, but, however, although).\n\nRÚBRICA OFICIAL (12 puntos):\n';
+    RUBRIC.forEach(c => {
+      geminiText += '\n' + c.title + ' (' + fmt(c.levels[0][1]) + ' pts)\n' + c.levels.map(l => '- ' + fmt(l[1]) + ' ' + ptsLabel(l[1]) + ' (' + l[0] + '): ' + l[2]).join('\n') + '\n';
+    });
+    geminiText += '\nCALIBRACIÓN PARA NIVEL B1 (hispanohablantes):\nEstos errores son típicos y esperables en este nivel. Cuéntalos según la rúbrica, pero explícalos con claridad:\n- "will to" / "can to" + verbo\n- present perfect con tiempo terminado: "I have gone there last year"\n- sujeto omitido: "Is very fun" (por "It is very fun")\n- "people is" (por "people are")\n- "since two years" (por "for two years")\n- "I usually am…" (por "I\'m usually…")\nNo evalúes con criterios de nivel B2 o superior.\n\n' +
+      'ENTREGA TU RESPUESTA EN DOS BLOQUES SEPARADOS Y CLARAMENTE MARCADOS. NO mezcles el contenido de los bloques. Todo en español, excepto los ejemplos en inglés.\n\n' +
+      '🔷 BLOQUE 1 — EVALUACIÓN\n1. ⚠️ ADVERTENCIA DE AUTENTICIDAD (siempre primero): analiza si el texto muestra señales de uso de IA o traductor (vocabulario demasiado avanzado para B1, ausencia total de errores típicos de hispanohablantes, conectores sofisticados como "moreover" o "furthermore", fluidez inusual). Si no hay señales, escribe: "No se detectan señales de uso de IA o traductor."\n2. COMENTARIO GENERAL (3–4 oraciones), indicando si respondió las cinco preguntas.\n3. EVALUACIÓN POR CRITERIO: nivel alcanzado, puntaje sugerido y justificación breve.\n4. ERRORES ESPECÍFICOS (máximo 4): ✗ "error" → ✓ "corrección" — Explicación breve.\n5. SUGERENCIAS DE MEJORA (2–3, concretas).\n6. MENSAJE DE CIERRE motivador (una frase).\n\n' +
+      '🔶 BLOQUE 2 — RESUMEN DE PUNTAJE\nCriterio 1 — Coherencia y Extensión: ___ / 4 pts\nCriterio 2 — Vocabulario: ___ / 3 pts\nCriterio 3 — Gramática: ___ / 3 pts\nCriterio 4 — Ortografía: ___ / 2 pts\n─────────────────────────────────\nTotal sugerido: ___ / 12 pts';
+  }
+  return geminiText;
+}
+function copyForGemini(section){
+  let hasContent = false, warnEl = null;
+  if (section === 'ra'){ hasContent = RA_ITEMS.some(it => g(it.id).trim() !== ''); warnEl = document.getElementById('geminiWarnRA'); }
+  else if (section === 'w'){ hasContent = g('writingText').trim() !== ''; warnEl = document.getElementById('geminiWarnW'); }
+  if (warnEl){ if (!hasContent){ warnEl.classList.add('visible'); return; } warnEl.classList.remove('visible'); }
+  const geminiText = buildPrompt(section);
+  copyToClipboard(geminiText);
+  showGeminiModal();
+}
+function copyToClipboard(text){
+  if (navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).catch(() => fallbackCopy(text)); }
+  else { fallbackCopy(text); }
+}
+function fallbackCopy(text){
+  const ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  try { document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+}
+function showGeminiModal(){ document.getElementById('geminiSuccessModal').classList.add('active'); }
+function closeModal(id){ document.getElementById(id).classList.remove('active'); }
+
+// ================= INIT =================
+window.addEventListener('load', () => {
+  renderRubric();
+  loadSaved();
+  updateWordCount();
+  updateRubric();
+  checkForAnswers();
+  updateProgress();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal('geminiSuccessModal'); });
+
+Object.assign(window,{mt_saveAll:saveAll,mt_toggleEs:toggleEs,mt_trackPlay:trackPlay,mt_updateWordCount:updateWordCount,mt_copyForGemini:copyForGemini,mt_clearAllAnswers:clearAllAnswers,mt_checkBlanksAndCalculate:checkBlanksAndCalculate,mt_calculateFinalGrade:calculateFinalGrade,mt_updateWithGeminiScores:updateWithGeminiScores,mt_togglePartialFeedback:togglePartialFeedback,mt_filterFeedback:filterFeedback,mt_closeModal:closeModal,mt_updateRubric:updateRubric});
+})();
+</script>
+</body>
+</html>
